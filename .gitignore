@@ -1,0 +1,17 @@
+*/
+!.gitigngore
+!pressurized-rubber-band/
+build
+.vscode
+viz*
+*.curve
+*.input
+log.*
+*.log
+main2d
+main3d
+hier*
+*.pt
+*.session
+*.area
+!Poiseuille-slanted/
