@@ -1,7 +1,7 @@
 # composite_bspline_tests
 
 # References
-[1] B. E. Griffith, X. Luo, [Hybrid finite difference/finite element immersed boundary method](https://onlinelibrary.wiley.com/doi/10.1002/cnm.2888), Int J Numer Methods Biomed
+[1] B. E. Griffith, X. Luo, [Hybrid finite difference/finite element immersed boundary method](https://onlinelibrary.wiley.com/doi/epdf/10.1002/cnm.2888), Int J Numer Methods Biomed
 Eng 00 (2017) 1–32. 
 
 [2] D. Wells, B. Vadala-Roth, Jae H. Lee, Boyce E. Griffith,  [A Nodal Immersed Finite Element-Finite Difference Method](https://arxiv.org/abs/2111.09958), Journal of computational physics 477 (2023): 111890.
