@@ -19,7 +19,7 @@ Phys 457 (2022) 111042.
 <img src="https://github.com/user-attachments/assets/72131954-b9ba-4f76-a173-29f23953a590" width="25%" height="25%">
 <img src="https://github.com/user-attachments/assets/8373619e-d88d-48ba-92eb-2f411ceb4c1d" width="25%" height="25%">
 
-[2] Soft elastic disc in lid driven cavity
+[2] Soft elastic disc in lid-driven cavity
 
 <img src="https://github.com/user-attachments/assets/294ffe52-df18-4e3b-8850-1ad53b838594" width="50%" height="50%">
 
@@ -86,4 +86,6 @@ Phys 457 (2022) 111042.
 [5] Bioprosthetic heart valve dynamics in a pulse duplicator
 
 ![image](https://github.com/user-attachments/assets/b6171621-8565-467b-b68d-32479a1ef334)
+![image](https://github.com/user-attachments/assets/3980a0de-fb6a-4ffe-a835-a393ffb6ba28)
+
 
