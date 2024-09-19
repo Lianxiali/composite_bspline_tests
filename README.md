@@ -13,3 +13,20 @@ Phys 457 (2022) 111042.
 
 [5] Cole Gruninger, Aaron Barrett, Fuhui Fang, M. Gregory Forest, Boyce E. Griffith, [Benchmarking the Immersed Boundary Method for Viscoelastic Flows](https://arxiv.org/abs/2309.00548), Journal of Computational Physics. 2024 Jun 1;506:112888.
 
+# Cases
+[1]  Two-dimensional flow through a slanted channel. [2](https://onlinelibrary.wiley.com/doi/10.1002/cnm.2888), [3](https://arxiv.org/abs/2111.09958)
+
+[2] Two-dimensional Pressure-loaded Elastic Band. [2](https://onlinelibrary.wiley.com/doi/10.1002/cnm.2888), [3](https://arxiv.org/abs/2111.09958)
+
+[3] Compression Test. [2](https://onlinelibrary.wiley.com/doi/10.1002/cnm.2888)
+
+[4] Cook’s Membrane. [2](https://onlinelibrary.wiley.com/doi/10.1002/cnm.2888)
+
+[5] Torsion
+
+[6] Hessenthaler’s Three-dimensional FSI Benchmark
+
+[7]  Modified Turek-Hron
+
+[8] FSI Model of Bioprosthetic Heart Valve Dynamics
+
