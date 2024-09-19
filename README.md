@@ -54,7 +54,7 @@ Phys 457 (2022) 111042.
 
 [2] Soft elastic disc in lid driven cavity
 
-<img src="https://github.com/user-attachments/assets/294ffe52-df18-4e3b-8850-1ad53b838594">
+<img src="https://github.com/user-attachments/assets/294ffe52-df18-4e3b-8850-1ad53b838594" width="50%" height="50%">
 
 [3] Flow past a cylinder
 
