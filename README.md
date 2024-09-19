@@ -58,7 +58,7 @@ Phys 457 (2022) 111042.
 
 [3] Flow past a cylinder
 
-<img src="https://github.com/user-attachments/assets/e7516543-eef0-46ed-b693-72ba636b5439">
+<img src="https://github.com/user-attachments/assets/e7516543-eef0-46ed-b693-72ba636b5439" width="25%" height="25%">
 
 [4] Idealized model of left ventricular mechanics
 
