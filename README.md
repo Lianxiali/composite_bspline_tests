@@ -20,11 +20,10 @@ Phys 457 (2022) 111042.
 
 [2] Two-dimensional Pressure-loaded Elastic Band. [2](https://onlinelibrary.wiley.com/doi/10.1002/cnm.2888), [3](https://arxiv.org/abs/2111.09958)
 
-<img src="https://github.com/user-attachments/assets/884ecc6a-79c7-45ff-9f79-dbc03ae2aac2" width="25%" height="25%">
+<img src="https://github.com/user-attachments/assets/884ecc6a-79c7-45ff-9f79-dbc03ae2aac2" width="50%" height="50%">
 
 [3] Compression Test. [2](https://onlinelibrary.wiley.com/doi/10.1002/cnm.2888)
-![image](https://github.com/user-attachments/assets/1d88a6af-f5ae-4d7d-9dcb-c67a986f530c)
-<img src="https://github.com/user-attachments/assets/884ecc6a-79c7-45ff-9f79-dbc03ae2aac2)" width="25%" height="25%">
+<img src="https://github.com/user-attachments/assets/1d88a6af-f5ae-4d7d-9dcb-c67a986f530c))" width="25%" height="25%">
 
 [4] Cook’s Membrane. [2](https://onlinelibrary.wiley.com/doi/10.1002/cnm.2888)
 ![image](https://github.com/user-attachments/assets/2b4ccf04-92e0-4cb1-b042-576a36b1eb6f)
