@@ -20,7 +20,7 @@ Phys 457 (2022) 111042.
 
 [2] Two-dimensional Pressure-loaded Elastic Band. [2](https://onlinelibrary.wiley.com/doi/10.1002/cnm.2888), [3](https://arxiv.org/abs/2111.09958)
 
-<img src="https://github.com/user-attachments/assets/884ecc6a-79c7-45ff-9f79-dbc03ae2aac2" width="50%" height="50%">
+<img src="https://github.com/user-attachments/assets/884ecc6a-79c7-45ff-9f79-dbc03ae2aac2" width="25%" height="50%">
 
 [3] Compression Test. [2](https://onlinelibrary.wiley.com/doi/10.1002/cnm.2888)
 
