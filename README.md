@@ -16,7 +16,8 @@ Phys 457 (2022) 111042.
 # Cases
 [1]  Two-dimensional flow through a slanted channel. [2](https://onlinelibrary.wiley.com/doi/10.1002/cnm.2888), [3](https://arxiv.org/abs/2111.09958)
 
-<img src="https://github.com/user-attachments/assets/80c1fb3e-2504-444e-8786-440b4ae12c09" width="200" height="100">
+<img src="https://github.com/user-attachments/assets/80c1fb3e-2504-444e-8786-440b4ae12c09" width="50%" height="50%">
+
 [2] Two-dimensional Pressure-loaded Elastic Band. [2](https://onlinelibrary.wiley.com/doi/10.1002/cnm.2888), [3](https://arxiv.org/abs/2111.09958)
 ![image](https://github.com/user-attachments/assets/884ecc6a-79c7-45ff-9f79-dbc03ae2aac2)
 
