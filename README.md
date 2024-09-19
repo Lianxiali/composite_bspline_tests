@@ -13,7 +13,7 @@ Phys 457 (2022) 111042.
 
 [5] Cole Gruninger, Aaron Barrett, Fuhui Fang, M. Gregory Forest, Boyce E. Griffith, [Benchmarking the Immersed Boundary Method for Viscoelastic Flows](https://arxiv.org/abs/2309.00548), Journal of Computational Physics. 2024 Jun 1;506:112888.
 
-# Cases
+# Cases in Ref [2]
 [1]  Two-dimensional flow through a slanted channel. [2](https://onlinelibrary.wiley.com/doi/10.1002/cnm.2888), [3](https://arxiv.org/abs/2111.09958)
 
 <img src="https://github.com/user-attachments/assets/80c1fb3e-2504-444e-8786-440b4ae12c09" width="25%" height="25%">
@@ -45,4 +45,23 @@ Phys 457 (2022) 111042.
 [8] FSI Model of Bioprosthetic Heart Valve Dynamics
 
 <img src="https://github.com/user-attachments/assets/8cb05702-dea2-4a05-8db3-68bfebded0fb" width="25%" height="25%">
+
+# Cases in Ref [1]
+[1] Anisotropic and Orthotropic shell
+
+<img src="https://github.com/user-attachments/assets/72131954-b9ba-4f76-a173-29f23953a590" width="25%" height="25%">
+<img src="https://github.com/user-attachments/assets/8373619e-d88d-48ba-92eb-2f411ceb4c1d" width="25%" height="25%">
+
+[2] Soft elastic disc in lid driven cavity
+
+<img src="https://github.com/user-attachments/assets/294ffe52-df18-4e3b-8850-1ad53b838594">
+
+[3] Flow past a cylinder
+
+<img src="https://github.com/user-attachments/assets/e7516543-eef0-46ed-b693-72ba636b5439">
+
+[4] Idealized model of left ventricular mechanics
+
+<img src="https://github.com/user-attachments/assets/3f11b71e-332f-47dc-bfe7-562d3d8f40f6" width="25%" height="25%">
+
 
