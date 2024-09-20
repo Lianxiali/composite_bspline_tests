@@ -14,6 +14,11 @@ Switch the version of IFED by changing the parameters in __IBFEMethod__ section
 # Nodal IFED (MFAC = 1.0)
 ![image (11)](https://github.com/user-attachments/assets/96b66683-6258-44e7-a6a2-f2c5dc49c374)
 
+# Elemental IFED (MFAC = 4.0)
+![image](https://github.com/user-attachments/assets/2bb30131-774e-410d-af65-74bd4202ae89)
+![image](https://github.com/user-attachments/assets/5d7e32a7-7111-47b6-808a-3ab965a41bf6)
+![image](https://github.com/user-attachments/assets/13ddc590-0d68-46d2-afbe-e90bef2ee7b1)
+
 
 # Nodal IFED (MFAC = 4.0)
 ![image](https://github.com/user-attachments/assets/f31a0ce5-8efe-4526-8d1b-74a3ba3af784)
