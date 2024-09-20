@@ -43,6 +43,8 @@ Cole
 
 IBAMR  
 ![image](https://github.com/user-attachments/assets/ca23488d-05ac-4d6b-bf1b-b2134c30630b)
+![image (18)](https://github.com/user-attachments/assets/2a604718-4cd0-4bda-84f8-c7cff5196c96)
+
 
 
 
