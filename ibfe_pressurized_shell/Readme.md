@@ -5,7 +5,7 @@ Switch the version of IFED by changing the parameters in __IBFEMethod__ section
     
 [2] nodal IFED  
     ```
-    use_consistent_mass_matrix = FALSE       
+    use_consistent_mass_matrix = FALSE  
     IB_use_nodal_quadrature    = TRUE
     ```  
 
