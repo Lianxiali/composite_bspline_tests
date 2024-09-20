@@ -4,10 +4,10 @@ Switch the version of IFED by changing the parameters in __IBFEMethod__ section
     ```use_consistent_mass_matrix = TRUE```   
     
 [2] nodal IFED  
-    ```
-    use_consistent_mass_matrix = FALSE  </br>
+    <code>
+    use_consistent_mass_matrix = FALSE  <br/>
     IB_use_nodal_quadrature    = TRUE
-    ```  
+    <code>
 
 # Elemental IFED (MFAC = 1.0)
 ![image](https://github.com/user-attachments/assets/a669ead4-a3ad-431b-8c16-6c99d261d317)
