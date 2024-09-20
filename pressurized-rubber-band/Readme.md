@@ -1,17 +1,17 @@
 #Elastic pressurized membrane 
 
 ## parameters
-A Pressurized Circular Membrane Case
-L = 1 (square domain)
-R = 0.25 (radius, high pressure region)
-pi = 0.8019 Pa (high pressure region)
-po = -0.1960 Pa (low pressure region)
-N = 128 (fluid cell number on each side)
-Mfac = 0.5 (mesh factor)
-mu = 0.1 (viscosity)
-rho = 1 (density)
-Kappa = 1 (spring parameter)
--stokes_ksp_rtol 1.0e-12
+A Pressurized Circular Membrane Case  
+L = 1 (square domain)  
+R = 0.25 (radius, high pressure region)  
+pi = 0.8019 Pa (high pressure region)  
+po = -0.1960 Pa (low pressure region)  
+N = 128 (fluid cell number on each side)  
+Mfac = 0.5 (mesh factor)  
+mu = 0.1 (viscosity)  
+rho = 1 (density)  
+Kappa = 1 (spring parameter)  
+-stokes_ksp_rtol 1.0e-12  
 
 ## Results
 ### Vorticity field
