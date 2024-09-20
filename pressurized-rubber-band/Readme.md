@@ -34,7 +34,7 @@ Vorticity field at t = 0.05 for the IB method using the IB4, BS4BS3, and BS6BS5 
 
 ### Pressure at T = 0.05  
 ![image](https://github.com/user-attachments/assets/6e7c4d51-6455-4212-921b-5d2b3c1a44a8)
-![image](https://github.com/user-attachments/assets/8d7cece9-c58d-4fe4-be70-2428f8d8b660)
+![image](https://github.com/user-attachments/assets/c37dbddf-90c6-4ecf-8020-5e0cc0eebae9)
 ![image](https://github.com/user-attachments/assets/b4b92dc8-0836-4149-9dc6-111a060a8000)
 
 ### Volume conservation comparison
