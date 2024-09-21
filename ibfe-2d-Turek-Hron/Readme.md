@@ -20,4 +20,6 @@ The input file has an issue:
 DX0 = H/N                           
 DX  = H/NFINEST  
 ```
-*H* was wrongly set as *L*, which causes the solid mesh is very coarse.
+*H* was wrongly set as *L*, which causes the solid mesh to be very coarse.
+
+![image](https://github.com/user-attachments/assets/f15c4882-f95d-45a5-aeab-0b3b53993655)
