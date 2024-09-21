@@ -14,7 +14,7 @@
         - IBFEMethod::FORCE_SYSTEM_NAME  
         - IBFEMethod::COORDS_SYSTEM_NAME  
         
-** Note: the source file _example.cpp_ and _input2d_ are actually from examples/IBFE/explicit/ex6**  
+**Note: the source file _example.cpp_ and _input2d_ are actually from examples/IBFE/explicit/ex6**  
 The input file has an issue:
 ```
 DX0 = H/N                           
