@@ -6,10 +6,10 @@
         This mesh file does not exist.  
 
 [2] main.cpp  
-    [*] need to comment out 
+    [-] need to comment out 
         // #include <IBAMR_config.h>  
         // #include <IBTK_config.h>  
-    [*] warnings (deprecated functions)  
+    [-] warnings (deprecated functions)  
         - IBFEMethod::VELOCITY_SYSTEM_NAME  
         - IBFEMethod::FORCE_SYSTEM_NAME  
         - IBFEMethod::COORDS_SYSTEM_NAME  
