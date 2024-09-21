@@ -1,0 +1,4 @@
+/nas/longleaf/home/boyceg/sfw/petsc/petsc-maint/longleaf-openmpi_gcc_4.8.5-opt/bin/mpirun ./main2d input2d.tune \
+   -stokes_ksp_rtol 1.0e-6 -stokes_ksp_type fgmres \
+   -velocity_ksp_type gmres -velocity_pc_type none -velocity_ksp_norm_type none -velocity_ksp_max_it 1 \
+   -pressure_ksp_type gmres                        -pressure_ksp_norm_type none -pressure_ksp_max_it 1
