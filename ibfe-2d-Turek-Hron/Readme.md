@@ -1,5 +1,5 @@
 # ISSUE in the original case from fe_benchmarks/2d-Turek-Hron
-[1] undefined in input2d.tune: 
+[1] undefined in input2d.tune:  
     1. N_NUM  
     2. DUMP_INTRVL  
     3. ERROR: Unrecognized file extension: data/BEAM_FILE  
