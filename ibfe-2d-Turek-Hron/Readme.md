@@ -23,3 +23,12 @@ DX  = H/NFINEST
 *H* was wrongly set as *L*, which causes the solid mesh to be very coarse.
 
 ![image](https://github.com/user-attachments/assets/f15c4882-f95d-45a5-aeab-0b3b53993655)
+
+Parameters for the Turek-Hron benchmark
+Density| ρ | 1,000| kg /m3
+Viscosity| µ| 1.0| Pa · s
+Material model| -| modified neo-Hookean| -
+Shear modulus| G| 2.0| MPa
+Numerical bulk modulus| κstab| 18.78 − 75.12| MPa
+Final time| Tf |12.0| s
+Load time| Tl |2.0| s
