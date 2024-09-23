@@ -25,6 +25,7 @@ DX  = H/NFINEST
 ![image](https://github.com/user-attachments/assets/f15c4882-f95d-45a5-aeab-0b3b53993655)
 
 Parameters for the Turek-Hron benchmark
+| :---------------- | :------: | ----: |
 Density| ρ | 1,000| kg /m3
 Viscosity| µ| 1.0| Pa · s
 Material model| -| modified neo-Hookean| -
