@@ -1,4 +1,4 @@
-<img src="https://github.com/user-attachments/assets/7efd39c5-7ef5-45e0-ac33-8fdcdfc581ef" width="100" height="100">  
+<img src="https://github.com/user-attachments/assets/7efd39c5-7ef5-45e0-ac33-8fdcdfc581ef" width="50%" height="50%">  
 Shear locking with P1 (TRI3) element
 
 ![image](https://github.com/user-attachments/assets/08558a92-38d2-4fe3-9d72-c86fbb17b849)
