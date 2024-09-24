@@ -13,9 +13,8 @@ Zoomed in
 
 # Volume conservation  
 ## conventional kernels  
-![image](https://github.com/user-attachments/assets/8f3a3590-00b3-4bfb-90b0-f2e020887d23)
-
-![image](https://github.com/user-attachments/assets/22a70a4b-02eb-4d26-84b1-0452f12f290f)
+<img src="https://github.com/user-attachments/assets/8f3a3590-00b3-4bfb-90b0-f2e020887d23" width="40%" height="40%">
+<img src="https://github.com/user-attachments/assets/22a70a4b-02eb-4d26-84b1-0452f12f290f" width="40%" height="40%">
 
 ![image](https://github.com/user-attachments/assets/699c2fe6-6e3a-4deb-9679-d2593a077b71)
 
