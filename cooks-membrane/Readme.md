@@ -1,3 +1,7 @@
+| Density | $\mu$  	| M  	| MFAC|   N	|Kernel|  DT	     |SHEAR_MOD | BULK_MOD|POISSON_RATION| KAPPA       | ELEM_TYPE| Coupling|
+|--------	|--------	|----	|----	|-----|------|--------   |----------|---------|--------------| -----       |----      |---------|
+| 1       |  0.16  	| 32 	| 2   | 90	| **** | 0.00010101|83.3333   | 833306  |0.49995       |1.2375e+06   |QUAD9     |Elemental|
+
 <img src="https://github.com/user-attachments/assets/7efd39c5-7ef5-45e0-ac33-8fdcdfc581ef" width="50%" height="50%">  
 Shear locking with P1 (TRI3) element
 
