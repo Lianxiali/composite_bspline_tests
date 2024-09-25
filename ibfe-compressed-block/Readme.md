@@ -65,14 +65,14 @@ Everything is the same except for the kernel function.
 # Jacobian rescaled to the same range 
 
 
-  <table>
-  <tr>
-    <td>$IB_{4}$ ($\nu = -1$)</td>
-     <td>$CBS_{32}$ ($\nu = -1$)</td>
+<table>
+ <tr>
+    <td>$IB_{4}$   ($\nu = -1$)</td>
+    <td>$CBS_{32}$ ($\nu = -1$)</td>
   </tr>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/8a4b20b9-a0ab-4c42-9fda-99c4c73698b7" width="40%" height="40%"> </td>
-    <td><img src="https://github.com/user-attachments/assets/3b9dc327-4f87-4fdc-b244-0df930ed4885" width="40%" height="40%"> </td>
+    <td><img src="https://github.com/user-attachments/assets/8a4b20b9-a0ab-4c42-9fda-99c4c73698b7" width="100%" height="100%"> </td>
+    <td><img src="https://github.com/user-attachments/assets/3b9dc327-4f87-4fdc-b244-0df930ed4885" width="100%" height="100%"> </td>
   </tr>
- </table>
+</table>
  
