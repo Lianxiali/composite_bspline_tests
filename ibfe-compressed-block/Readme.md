@@ -11,7 +11,9 @@ bottom boundary.   The structure uses a modified Neo-Hookean material model.
 <img src="https://github.com/user-attachments/assets/32202962-af34-465a-90ec-dddf9ce39afb" width="40%" height="40%">   
 <img src="https://github.com/user-attachments/assets/5ef44660-e3a5-4676-97d4-e1fdb8a739cd" width="40%" height="40%"> 
 </p>
-  ![image](https://github.com/user-attachments/assets/8a4b20b9-a0ab-4c42-9fda-99c4c73698b7)
+
+![image](https://github.com/user-attachments/assets/8a4b20b9-a0ab-4c42-9fda-99c4c73698b7)
+
 <p align="center">
 t = 100 s  
 </p>
