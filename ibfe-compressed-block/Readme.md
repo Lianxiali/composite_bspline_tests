@@ -73,5 +73,14 @@ Everything is the same except for the kernel function.
     <td width="50%"><img src="https://github.com/user-attachments/assets/3b9dc327-4f87-4fdc-b244-0df930ed4885" width=100% height=100%> </td>   
     <td width="50%"><img src="https://github.com/user-attachments/assets/b1f1f4c4-2df8-4aa9-92e4-dd1aa194f6db" width=100% height=100%> </td>
   </tr>
+
+ <tr align="center">
+    <td width="50%">$IB_{4}$   ($\nu = 0.4$)</td>
+    <td width="50%">$CBS_{32}$ ($\nu = 0.4$)</td>
+  </tr>
+  <tr align="center">
+    <td width="50%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>   
+    <td width="50%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>
+  </tr> 
 </table>
  
