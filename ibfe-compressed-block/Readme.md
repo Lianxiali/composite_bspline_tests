@@ -9,7 +9,7 @@ T = 100 s
 | 1       |  0.16  	| 32 	| 0.5 | 32	| IB_4 | 0.00125|80.194    | 374.239 | 2500  |QUAD4     |
 
 
-# CBS_{32} Nodel coupling
+# $CBS_{32}$ Nodel coupling
 Everything is the same except for the kernel function.
 
 <img src="https://github.com/user-attachments/assets/2e34332c-fe72-4b85-8b96-ead80b5b1371" width="40%" height="40%"> 
