@@ -1,5 +1,5 @@
 # Problem setup
-![image](https://github.com/user-attachments/assets/0f7b56fc-4fcd-43af-862b-03ee060e48f8)
+<img src="https://github.com/user-attachments/assets/0f7b56fc-4fcd-43af-862b-03ee060e48f8" width="40%" height="40%">   
 
 This benchmark is a plane strain quasi-static problem involving a rectangular block with downward
 traction applied in the center of the top side of the mesh and zero vertical displacements applied on the
