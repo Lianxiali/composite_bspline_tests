@@ -14,13 +14,13 @@ t = 100 s
 
 # $CBS_{32}$ Nodal coupling
 Everything is the same except for the kernel function.
-<p align="center"> t = 20s
+<p align="center">
 <img src="https://github.com/user-attachments/assets/7e771050-1dd7-4e0f-b9bb-444331da387b" width="40%" height="40%"> 
 <img src="https://github.com/user-attachments/assets/fb4b73eb-7d8d-475a-b994-fb8f68cd281e" width="40%" height="40%"> 
 </p>
 <p align="center"> t = 20s </p>
 
-<p align="center"> t = 100s
+<p align="center"> 
 <img src="https://github.com/user-attachments/assets/5df7bfa5-fe98-4a44-963f-7896a1e8ddba" width="40%" height="40%"> 
 <img src="https://github.com/user-attachments/assets/111072be-9559-49ac-9482-e3ce09dda1b5" width="40%" height="40%"> 
 </p>
