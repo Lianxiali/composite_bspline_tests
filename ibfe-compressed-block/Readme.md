@@ -71,7 +71,7 @@ Everything is the same except for the kernel function.
   </tr>
   <tr>
     <td width="50%"><img src="https://github.com/user-attachments/assets/3b9dc327-4f87-4fdc-b244-0df930ed4885" width=100% height=100%> </td>   
-    <td width="50%"><img src="https://github.com/user-attachments/assets/8a4b20b9-a0ab-4c42-9fda-99c4c73698b7" width=100% height=100%> </td>
+    <td width="50%"><img src="https://github.com/user-attachments/assets/b1f1f4c4-2df8-4aa9-92e4-dd1aa194f6db" width=100% height=100%> </td>
   </tr>
 </table>
  
