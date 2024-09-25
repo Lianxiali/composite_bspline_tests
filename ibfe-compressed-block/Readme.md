@@ -70,7 +70,7 @@ Everything is the same except for the kernel function.
     <td width="50%">$CBS_{32}$ ($\nu = -1$)</td>
   </tr>
   <tr align="center">
-    <td width="50%"><img src="https://github.com/user-attachments/assets/3b9dc327-4f87-4fdc-b244-0df930ed4885" width=100% height=100%> </td>   
+    <td width="50%"><img src="https://github.com/user-attachments/assets/3395acd2-0a52-4c34-9321-1802b0c95a77" width=100% height=100%> </td>   
     <td width="50%"><img src="https://github.com/user-attachments/assets/b1f1f4c4-2df8-4aa9-92e4-dd1aa194f6db" width=100% height=100%> </td>
   </tr>
 
@@ -80,7 +80,7 @@ Everything is the same except for the kernel function.
   </tr>
   <tr align="center">
     <td width="50%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>   
-    <td width="50%"><img src="https://github.com/user-attachments/assets/3c6c0954-24b8-4907-9800-b7b6b9844fb3" width=100% height=100%> </td>
+    <td width="50%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>
   </tr> 
 </table>
  
