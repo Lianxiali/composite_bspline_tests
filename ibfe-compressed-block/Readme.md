@@ -1,3 +1,10 @@
+# Problem setup
+![image](https://github.com/user-attachments/assets/0f7b56fc-4fcd-43af-862b-03ee060e48f8)
+
+This benchmark is a plane strain quasi-static problem involving a rectangular block with downward
+traction applied in the center of the top side of the mesh and zero vertical displacements applied on the
+bottom boundary.   The structure uses a modified Neo-Hookean material model.
+
 # $IB_4$ Nodal coupling ($\nu = 0.4$)
 <p align="center">
 <img src="https://github.com/user-attachments/assets/32202962-af34-465a-90ec-dddf9ce39afb" width="40%" height="40%">   
