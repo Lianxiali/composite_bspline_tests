@@ -32,3 +32,11 @@ Everything is the same except for the kernel function.
 <img src="https://github.com/user-attachments/assets/9c52a710-18e1-4f50-b8e4-e672311b886e" width="40%" height="40%"> 
 </p>
 <p align="center"> t = 20s </p>
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/9c3f201a-44a1-4622-b625-4fc52abe907f" width="40%" height="40%"> 
+<img src="https://github.com/user-attachments/assets/9e961099-73d3-4aec-9f54-265d2475c158" width="40%" height="40%"> 
+</p>
+<p align="center"> t = 100s </p>
+
+
