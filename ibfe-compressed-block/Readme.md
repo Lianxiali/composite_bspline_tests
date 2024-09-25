@@ -56,14 +56,13 @@ Everything is the same except for the kernel function.
 <img src="https://github.com/user-attachments/assets/141e4146-1e58-4c1c-830d-918585c62546" width="40%" height="40%"> 
 </p>
 <p align="center"> t = 20s </p>
-
+<p align="center">
 <img src="https://github.com/user-attachments/assets/26b72a02-8de2-45ca-97e1-e2cc16bf0b89" width="40%" height="40%"> 
 <img src="https://github.com/user-attachments/assets/85ddae92-8149-424a-85f2-076a111a1d40" width="40%" height="40%"> 
-
+</p>
 <p align="center"> t = 100s </p>
 
 # Jacobian rescaled to the same range 
-
 
 <table>
  <tr>
@@ -71,8 +70,8 @@ Everything is the same except for the kernel function.
     <td>$CBS_{32}$ ($\nu = -1$)</td>
   </tr>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/8a4b20b9-a0ab-4c42-9fda-99c4c73698b7" width=400 height=280> </td>
-    <td><img src="https://github.com/user-attachments/assets/3b9dc327-4f87-4fdc-b244-0df930ed4885" width=400 height=280> </td>
+    <td><img src="https://github.com/user-attachments/assets/8a4b20b9-a0ab-4c42-9fda-99c4c73698b7" width=50% height=50%> </td>
+    <td><img src="https://github.com/user-attachments/assets/3b9dc327-4f87-4fdc-b244-0df930ed4885" width=50% height=50%> </td>
   </tr>
 </table>
  
