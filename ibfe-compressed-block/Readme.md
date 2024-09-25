@@ -47,4 +47,10 @@ Everything is the same except for the kernel function.
 </p>
 <p align="center"> t = 100s </p>
 
+# $IB_{4}$ Nodal coupling ($\nu = -1$)
+<p align="center">
+<img src="https://github.com/user-attachments/assets/c159433d-0075-408e-b623-75fce0b1a8ee" width="40%" height="40%"> 
+<img src="https://github.com/user-attachments/assets/141e4146-1e58-4c1c-830d-918585c62546" width="40%" height="40%"> 
+</p>
+<p align="center"> t = 20s </p>
 
