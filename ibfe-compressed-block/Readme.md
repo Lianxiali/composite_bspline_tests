@@ -57,3 +57,7 @@ Everything is the same except for the kernel function.
 </p>
 <p align="center"> t = 20s </p>
 
+<img src="https://github.com/user-attachments/assets/3b9dc327-4f87-4fdc-b244-0df930ed4885" width="40%" height="40%"> 
+<img src="https://github.com/user-attachments/assets/85ddae92-8149-424a-85f2-076a111a1d40" width="40%" height="40%"> 
+
+<p align="center"> t = 100s </p>
