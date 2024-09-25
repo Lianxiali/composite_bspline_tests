@@ -28,7 +28,7 @@ Everything is the same except for the kernel function.
 
 # $CBS_{32}$ Nodal coupling ($\nu = -1)
 <p align="center">
-<img src="https://github.com/user-attachments/assets/778cfc0c-70ed-4e7a-b6f7-d8e26d7febb5" width="40%" height="40%"> 
-<img src="https://github.com/user-attachments/assets/9c90523f-50ee-4059-b358-87cddbd88d8b" width="40%" height="40%"> 
+<img src="https://github.com/user-attachments/assets/6a26da2a-7eb9-4ea1-8cc9-6fb59af3d0ce" width="40%" height="40%"> 
+<img src="https://github.com/user-attachments/assets/9c52a710-18e1-4f50-b8e4-e672311b886e" width="40%" height="40%"> 
 </p>
 <p align="center"> t = 20s </p>
