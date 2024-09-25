@@ -80,7 +80,8 @@ Everything is the same except for the kernel function.
   </tr>
   <tr align="center">
     <td width="50%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>   
-    <td width="50%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>
+    <td width="50%"><img src="https://github.com/user-attachments/assets/3c6c0954-24b8-4907-9800-b7b6b9844fb3" width=100% height=100%> </td>
   </tr> 
 </table>
  
+![image](https://github.com/user-attachments/assets/abf58ffe-62f4-475a-9b72-8353ad7e31db)
