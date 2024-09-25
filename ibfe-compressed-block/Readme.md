@@ -1,4 +1,4 @@
-# $IB_4$ Nodel coupling
+# $IB_4$ Nodal coupling
 <p align="center">
 <img src="https://github.com/user-attachments/assets/32202962-af34-465a-90ec-dddf9ce39afb" width="40%" height="40%">   
 <img src="https://github.com/user-attachments/assets/5ef44660-e3a5-4676-97d4-e1fdb8a739cd" width="40%" height="40%"> 
@@ -12,7 +12,7 @@ t = 100 s
 | 1       |  0.16  	| 32 	| 0.5 | 32	| IB_4 | 0.00125|80.194    | 374.239 | 2500  |QUAD4     |
 
 
-# $CBS_{32}$ Nodel coupling
+# $CBS_{32}$ Nodal coupling
 Everything is the same except for the kernel function.
 <p align="center">
 <img src="https://github.com/user-attachments/assets/7e771050-1dd7-4e0f-b9bb-444331da387b" width="40%" height="40%"> 
