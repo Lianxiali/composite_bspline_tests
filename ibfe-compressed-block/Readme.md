@@ -15,14 +15,14 @@ Everything is the same except for the kernel function.
 <img src="https://github.com/user-attachments/assets/2e34332c-fe72-4b85-8b96-ead80b5b1371" width="40%" height="40%"> 
 <img src="https://github.com/user-attachments/assets/bd174b88-7b19-4fb4-9925-4aa2f656c475" width="40%" height="40%"> 
 
-t = 20s
+<p align="center"> t = 20s </p>
 
 <img src="https://github.com/user-attachments/assets/a04b656d-3c73-438f-b3d5-6bba57651ce3" width="40%" height="40%"> 
 <img src="https://github.com/user-attachments/assets/ffe988b6-0e59-4e5b-aea5-7d2dc3656b3a" width="40%" height="40%"> 
 
-t = 40s
+<p align="center"> t = 40s </p>
 
 <img src="https://github.com/user-attachments/assets/5df7bfa5-fe98-4a44-963f-7896a1e8ddba" width="40%" height="40%"> 
 <img src="https://github.com/user-attachments/assets/111072be-9559-49ac-9482-e3ce09dda1b5" width="40%" height="40%"> 
 
-t =100s
+<p align="center"> t = 100s </p>
