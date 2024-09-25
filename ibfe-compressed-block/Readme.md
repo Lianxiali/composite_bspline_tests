@@ -71,8 +71,8 @@ Everything is the same except for the kernel function.
     <td>$CBS_{32}$ ($\nu = -1$)</td>
   </tr>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/8a4b20b9-a0ab-4c42-9fda-99c4c73698b7" width=270 height=480> </td>
-    <td><img src="https://github.com/user-attachments/assets/3b9dc327-4f87-4fdc-b244-0df930ed4885" width=270 height=480> </td>
+    <td><img src="https://github.com/user-attachments/assets/8a4b20b9-a0ab-4c42-9fda-99c4c73698b7" width=400 height=280> </td>
+    <td><img src="https://github.com/user-attachments/assets/3b9dc327-4f87-4fdc-b244-0df930ed4885" width=400 height=280> </td>
   </tr>
 </table>
  
