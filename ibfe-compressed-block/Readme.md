@@ -15,8 +15,7 @@ t = 100 s
 # $CBS_{32}$ Nodel coupling
 Everything is the same except for the kernel function.
 <p align="center">
-<img src="https://github.com/user-attachments/assets/2e34332c-fe72-4b85-8b96-ead80b5b1371" width="40%" height="40%"> 
-
+<img src="https://github.com/user-attachments/assets/7e771050-1dd7-4e0f-b9bb-444331da387b" width="40%" height="40%"> 
 <img src="https://github.com/user-attachments/assets/fb4b73eb-7d8d-475a-b994-fb8f68cd281e" width="40%" height="40%"> 
 </p>
 <p align="center"> t = 20s </p>
