@@ -1,4 +1,4 @@
-# $IB_4$ Nodal coupling
+# $IB_4$ Nodal coupling ($\nu = 0.4)
 <p align="center">
 <img src="https://github.com/user-attachments/assets/32202962-af34-465a-90ec-dddf9ce39afb" width="40%" height="40%">   
 <img src="https://github.com/user-attachments/assets/5ef44660-e3a5-4676-97d4-e1fdb8a739cd" width="40%" height="40%"> 
@@ -12,7 +12,7 @@ t = 100 s
 | 1       |  0.16  	     | 32 	| 0.5 | 32	| IB_4 | 0.00125|80.194    |0.4           | 374.239 | 2500  |QUAD4     |
 
 
-# $CBS_{32}$ Nodal coupling
+# $CBS_{32}$ Nodal coupling ($\nu = 0.4)
 Everything is the same except for the kernel function.
 <p align="center">
 <img src="https://github.com/user-attachments/assets/7e771050-1dd7-4e0f-b9bb-444331da387b" width="40%" height="40%"> 
@@ -25,3 +25,10 @@ Everything is the same except for the kernel function.
 <img src="https://github.com/user-attachments/assets/111072be-9559-49ac-9482-e3ce09dda1b5" width="40%" height="40%"> 
 </p>
 <p align="center"> t = 100s </p>
+
+# $CBS_{32}$ Nodal coupling ($\nu = -1)
+<p align="center">
+<img src="https://github.com/user-attachments/assets/778cfc0c-70ed-4e7a-b6f7-d8e26d7febb5" width="40%" height="40%"> 
+<img src="https://github.com/user-attachments/assets/9c90523f-50ee-4059-b358-87cddbd88d8b" width="40%" height="40%"> 
+</p>
+<p align="center"> t = 20s </p>
