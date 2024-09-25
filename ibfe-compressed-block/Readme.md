@@ -20,7 +20,7 @@ Everything is the same except for the kernel function.
 </p>
 <p align="center"> t = 20s </p>
 
-<p align="center">
+<p align="center"> t = 100s
 <img src="https://github.com/user-attachments/assets/5df7bfa5-fe98-4a44-963f-7896a1e8ddba" width="40%" height="40%"> 
 <img src="https://github.com/user-attachments/assets/111072be-9559-49ac-9482-e3ce09dda1b5" width="40%" height="40%"> 
 </p>
