@@ -1,4 +1,5 @@
 # Ref
+- D. Wells, B. Vadala-Roth, Jae H. Lee, Boyce E. Griffith,  [A Nodal Immersed Finite Element-Finite Difference Method](https://arxiv.org/abs/2111.09958), Journal of computational physics 477 (2023): 111890.
 - Ben Vadala-Roth, Shashank Acharya, Neelesh A. Patankar, Simone Rossi, Boyce E. Griffith, [Stabilization approaches for the hyperelastic immersed boundary method for problems of large-deformation incompressible elasticity](https://www.sciencedirect.com/science/article/abs/pii/S0045782520301614?via%3Dihub), Computer Methods in Applied Mechanics and Engineering, 2020(365): 112978.
 
 # Problem setup
