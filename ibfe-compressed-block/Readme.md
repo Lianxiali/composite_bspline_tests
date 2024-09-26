@@ -11,9 +11,9 @@ traction applied in the center of the top side of the mesh and zero vertical dis
 bottom boundary.   The structure uses a modified Neo-Hookean material model.
 
 ***
-<span style="color:red">
+
 # Fine mesh (N = 32)
-</span>
+
 
 
 # $IB_4$ Nodal coupling ($\nu = 0.4$)
@@ -103,9 +103,9 @@ Everything is the same except for the kernel function.
 
 
 ***
-<span style="color:red">
-<h1> Coarse mesh (N = 16) <h1>
-</span>
+
+<h1> <span style="color:red"> Coarse mesh (N = 16) </span> <h1>
+
 
 <table>
  <tr align="center">
