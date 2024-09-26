@@ -68,20 +68,24 @@ Everything is the same except for the kernel function.
  <tr align="center">
     <td width="50%">$IB_{4}$   ($\nu = -1$)</td>
     <td width="50%">$CBS_{32}$ ($\nu = -1$)</td>
+  <td width="50%">$CBS_{43}$ ($\nu = -1$)</td>
   </tr>
   <tr align="center">
-    <td width="50%"><img src="https://github.com/user-attachments/assets/3395acd2-0a52-4c34-9321-1802b0c95a77" width=100% height=100%> </td>   
-    <td width="50%"><img src="https://github.com/user-attachments/assets/b1f1f4c4-2df8-4aa9-92e4-dd1aa194f6db" width=100% height=100%> </td>
+    <td width="33%"><img src="https://github.com/user-attachments/assets/3395acd2-0a52-4c34-9321-1802b0c95a77" width=100% height=100%> </td>   
+    <td width="33%"><img src="https://github.com/user-attachments/assets/b1f1f4c4-2df8-4aa9-92e4-dd1aa194f6db" width=100% height=100%> </td>
+   <td width="33%"><img src="https://github.com/user-attachments/assets/a63f48ef-bd17-45e6-9913-da2e6c90bd19" width=100% height=100%> </td>
   </tr>
 
  <tr align="center">
-    <td width="50%">$IB_{4}$   ($\nu = 0.4$)</td>
-    <td width="50%">$CBS_{32}$ ($\nu = 0.4$)</td>
+    <td width="33%">$IB_{4}$   ($\nu = 0.4$)</td>
+    <td width="33%">$CBS_{32}$ ($\nu = 0.4$)</td>
+    <td width="33%">$CBS_{43}$ ($\nu = 0.4$)</td>  
   </tr>
   <tr align="center">
     <td width="50%"><img src="https://github.com/user-attachments/assets/d04c7683-33d3-4b12-a9fc-07c6468dfe9b" width=100% height=100%> </td>   
     <td width="50%"><img src="https://github.com/user-attachments/assets/217d0c75-d247-459b-afd7-229b0b4d4556" width=100% height=100%> </td>
   </tr> 
+  
 </table>
  
 ![image](https://github.com/user-attachments/assets/9ddd6211-d736-4abc-a6c7-999610be82e6)
