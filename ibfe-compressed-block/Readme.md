@@ -95,6 +95,31 @@ Everything is the same except for the kernel function.
  
 ![image](https://github.com/user-attachments/assets/16bd942c-b04e-4721-b581-34aa838cfd53)
 
+***
+# coarse mesh (N = 16)
 
+<table>
+ <tr align="center">
+    <td width="33%">$IB_{4}$   ($\nu = -1$)</td>
+    <td width="33%">$CBS_{32}$ ($\nu = -1$)</td>
+  <td width="33%">$CBS_{43}$ ($\nu = -1$)</td>
+  </tr>
+  <tr align="center">
+    <td width="33%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>   
+    <td width="33%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>
+   <td width="33%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>
+  </tr>
 
+ <tr align="center">
+    <td width="33%">$IB_{4}$   ($\nu = 0.4$)</td>
+    <td width="33%">$CBS_{32}$ ($\nu = 0.4$)</td>
+    <td width="33%">$CBS_{43}$ ($\nu = 0.4$)</td>  
+  </tr>
+  <tr align="center">
+    <td width="33%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>   
+    <td width="33%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>
+   <td width="33%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>
+  </tr> 
+  
+</table>
 
