@@ -105,6 +105,7 @@ Everything is the same except for the kernel function.
 ***
 
 <h1> <span style="color:red"> Coarse mesh (N = 16) </span> <h1>
+ 
 - Ben Vadala-Roth, Shashank Acharya, Neelesh A. Patankar, Simone Rossi, Boyce E. Griffith, [Stabilization approaches for the hyperelastic immersed boundary method for problems of large-deformation incompressible elasticity](https://www.sciencedirect.com/science/article/abs/pii/S0045782520301614?via%3Dihub), Computer Methods in Applied Mechanics and Engineering, 2020(365): 112978.
 
 <table>
@@ -114,9 +115,9 @@ Everything is the same except for the kernel function.
   <td width="33%">$CBS_{43}$ ($\nu = -1$)</td>
   </tr>
   <tr align="center">
-    <td width="33%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>   
-    <td width="33%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>
-   <td width="33%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>
+    <td width="33%"><img src="https://github.com/user-attachments/assets/88a899e4-3487-46bc-b23d-40d6b8641994" width=100% height=100%> </td>   
+    <td width="33%"><img src="https://github.com/user-attachments/assets/970ef4f0-fb49-4230-bd32-11686bbf1f84" width=100% height=100%> </td>
+    <td width="33%"><img src="https://github.com/user-attachments/assets/28eb9769-3134-4418-b43d-be159e578118" width=100% height=100%> </td>
   </tr>
 
  <tr align="center">
@@ -125,8 +126,8 @@ Everything is the same except for the kernel function.
     <td width="33%">$CBS_{43}$ ($\nu = 0.4$)</td>  
   </tr>
   <tr align="center">
-    <td width="33%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>   
-    <td width="33%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>
+    <td width="33%"><img src="https://github.com/user-attachments/assets/274cb8f7-35f4-4bde-b659-227c61611a5a" width=100% height=100%> </td>   
+    <td width="33%"><img src="https://github.com/user-attachments/assets/fc995bb2-fd7b-41bb-81f9-546c4a3e7bc3" width=100% height=100%> </td>
    <td width="33%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>
   </tr> 
   
