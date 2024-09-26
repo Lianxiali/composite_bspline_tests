@@ -82,8 +82,8 @@ Everything is the same except for the kernel function.
     <td width="33%">$CBS_{43}$ ($\nu = 0.4$)</td>  
   </tr>
   <tr align="center">
-    <td width="50%"><img src="https://github.com/user-attachments/assets/d04c7683-33d3-4b12-a9fc-07c6468dfe9b" width=100% height=100%> </td>   
-    <td width="50%"><img src="https://github.com/user-attachments/assets/217d0c75-d247-459b-afd7-229b0b4d4556" width=100% height=100%> </td>
+    <td width="33%"><img src="https://github.com/user-attachments/assets/d04c7683-33d3-4b12-a9fc-07c6468dfe9b" width=100% height=100%> </td>   
+    <td width="33%"><img src="https://github.com/user-attachments/assets/217d0c75-d247-459b-afd7-229b0b4d4556" width=100% height=100%> </td>
   </tr> 
   
 </table>
