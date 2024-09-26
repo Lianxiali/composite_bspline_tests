@@ -66,9 +66,9 @@ Everything is the same except for the kernel function.
 
 <table>
  <tr align="center">
-    <td width="50%">$IB_{4}$   ($\nu = -1$)</td>
-    <td width="50%">$CBS_{32}$ ($\nu = -1$)</td>
-  <td width="50%">$CBS_{43}$ ($\nu = -1$)</td>
+    <td width="33%">$IB_{4}$   ($\nu = -1$)</td>
+    <td width="33%">$CBS_{32}$ ($\nu = -1$)</td>
+  <td width="33%">$CBS_{43}$ ($\nu = -1$)</td>
   </tr>
   <tr align="center">
     <td width="33%"><img src="https://github.com/user-attachments/assets/3395acd2-0a52-4c34-9321-1802b0c95a77" width=100% height=100%> </td>   
