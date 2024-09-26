@@ -84,6 +84,7 @@ Everything is the same except for the kernel function.
   </tr> 
 </table>
  
-![image](https://github.com/user-attachments/assets/a9da6b7b-2e85-4fb8-b7d1-08e35679ffb2)
+![image](https://github.com/user-attachments/assets/9ddd6211-d736-4abc-a6c7-999610be82e6)
+
 
 
