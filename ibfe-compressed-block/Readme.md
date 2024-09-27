@@ -129,7 +129,7 @@ Everything is the same except for the kernel function.
   <tr align="center">
     <td width="33%"><img src="https://github.com/user-attachments/assets/274cb8f7-35f4-4bde-b659-227c61611a5a" width=100% height=100%> </td>   
     <td width="33%"><img src="https://github.com/user-attachments/assets/fc995bb2-fd7b-41bb-81f9-546c4a3e7bc3" width=100% height=100%> </td>
-   <td width="33%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>
+   <td width="33%"><img src="https://github.com/user-attachments/assets/be008e0e-c8c7-48dc-8b75-e8e7aeb2d8a8" width=100% height=100%> </td>
   </tr> 
   
 </table>
