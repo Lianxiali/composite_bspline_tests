@@ -134,6 +134,9 @@ Everything is the same except for the kernel function.
   
 </table>
 
+![image](https://github.com/user-attachments/assets/63c5645c-b15a-4786-8f84-9110b885e08c)
+
+
 ***
 
 # Coarse mesh (N = 16), Unmodified invariants 
