@@ -116,7 +116,7 @@ Everything is the same except for the kernel function.
   <td width="33%">$CBS_{43}$ ($\nu = -1$)</td>
   </tr>
   <tr align="center">
-    <td width="33%"><img src="https://github.com/user-attachments/assets/88a899e4-3487-46bc-b23d-40d6b8641994" width=100% height=100%> </td>   
+    <td width="33%"><img src="https://github.com/user-attachments/assets/07d9f642-0d9e-4248-a70f-a3304df5e88c" width=100% height=100%> </td>   
     <td width="33%"><img src="https://github.com/user-attachments/assets/970ef4f0-fb49-4230-bd32-11686bbf1f84" width=100% height=100%> </td>
     <td width="33%"><img src="https://github.com/user-attachments/assets/28eb9769-3134-4418-b43d-be159e578118" width=100% height=100%> </td>
   </tr>
