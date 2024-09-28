@@ -154,18 +154,20 @@ Everything is the same except for the kernel function.
     <td width="25%"><img src="https://github.com/user-attachments/assets/b22d3e40-5d0e-4ace-bd93-caf62d334357" width=100% height=100%> </td>
     <td width="25%"><img src="https://github.com/user-attachments/assets/0981dfd4-04d7-45c6-a258-ce6e3ed9b797" width=100% height=100%> </td>
   </tr>
+</table>
 
+***
+# Coarse mesh (N = 16), Modified invariants,  Nodal coupling, MFAC = 0.5, (endtime = 100s, loadtime = 40s)
+</table
  <tr align="center">
-    <td width="25%">$IB_{4}$   ($\nu = 0.4$, , MFAC = 1, Elemental coupling)</td>
-    <td width="25%">$CBS_{32}$ ($\nu = 0.4$)</td>
-    <td width="25%">$CBS_{43}$ ($\nu = 0.4$)</td>  
-  <td width="25%">$CBS_{43}$ ($\nu = 0.4$)</td>  
+    <td width="33%">$IB_{4}$   ($\nu = -1$, QUAD4, t = 100 s)</td>
+    <td width="33%">$CBS_{32}$ ($\nu = -1$, QUAD4, t = 100 s)</td>
+    <td width="33%">$CBS_{32}$ ($\nu = -1$,  TRI3, t = 100 s)</td>
   </tr>
   <tr align="center">
-    <td width="25%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>   
-    <td width="25%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>
-   <td width="25%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>
-   <td width="25%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>
+    <td width="33%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>   
+    <td width="33%"><img src="https://github.com/user-attachments/assets/fd87f929-ab81-44e2-83eb-e9bf2419fac4" width=100% height=100%> </td>
+   <td width="33%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>
   </tr> 
   
 </table>
