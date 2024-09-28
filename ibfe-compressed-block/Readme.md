@@ -172,7 +172,7 @@ Everything is the same except for the kernel function.
     <td width="33%">$CBS_{32}$ ($\nu = -1$,  TRI3, t = 100 s)</td>
   </tr>  
   <tr align="center">
-    <td width="33%"><img src="https://github.com/user-attachments/assets/73ab60ac-405b-41ca-bcaf-8ddbfc8a92b0" width=100% height=100%> </td>   
+    <td width="33%"><img src="https://github.com/user-attachments/assets/5381c35a-1d78-4870-a324-919da1d2fe94" width=100% height=100%> </td>   
     <td width="33%"><img src="https://github.com/user-attachments/assets/fd87f929-ab81-44e2-83eb-e9bf2419fac4" width=100% height=100%> </td>
     <td width="33%"><img src="https://github.com/user-attachments/assets/91f07d16-acd6-481d-a22c-fb14d9cade34" width=100% height=100%> </td>
   </tr> 
