@@ -143,25 +143,29 @@ Everything is the same except for the kernel function.
 # Coarse mesh (N = 16), Unmodified invariants 
 <table>
  <tr align="center">
-    <td width="33%">$IB_{4}$   ($\nu = -1$, MFAC = 1, Elemental coupling, t = 100s)</td>
-    <td width="33%">$CBS_{32}$ ($\nu = -1$)</td>
-  <td width="33%">$CBS_{43}$ ($\nu = -1$)</td>
+    <td width="25%">$IB_{4}$   ($\nu = -1$, MFAC = 1, QUAD4, Elemental coupling, t = 100s)</td>
+    <td width="25%">$CBS_{32}$ ($\nu = -1$, MFAC = 1, QUAD4, Nodal couping, t = 96s (endtime = 500s, loadtime = 100s)</td>
+    <td width="25%">$CBS_{32}$ ($\nu = -1$, MFAC = 0.5, QUAD4, Nodal couping, t = 50s (endtime = 100s, loadtime = 40s)</td>
+    <td width="25%">$CBS_{32}$ ($\nu = -1$, MFAC = 0.5, TRI3, Nodal coupling, t = 50 s, endtime = 100s, loadtime = 40s )</td>
   </tr>
   <tr align="center">
-    <td width="33%"><img src="https://github.com/user-attachments/assets/04a7b1ee-d6af-49e2-b21a-8cad09be3ece" width=100% height=100%> </td>   
-    <td width="33%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>
-    <td width="33%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>
+    <td width="25%"><img src="https://github.com/user-attachments/assets/04a7b1ee-d6af-49e2-b21a-8cad09be3ece" width=100% height=100%> </td>   
+    <td width="25%"><img src="https://github.com/user-attachments/assets/45ae0c4f-8c37-47c7-bbe5-5ed28cbcebc5" width=100% height=100%> </td>
+    <td width="25%"><img src="https://github.com/user-attachments/assets/b22d3e40-5d0e-4ace-bd93-caf62d334357" width=100% height=100%> </td>
+    <td width="25%"><img src="https://github.com/user-attachments/assets/0981dfd4-04d7-45c6-a258-ce6e3ed9b797" width=100% height=100%> </td>
   </tr>
 
  <tr align="center">
-    <td width="33%">$IB_{4}$   ($\nu = 0.4$, , MFAC = 1, Elemental coupling)</td>
-    <td width="33%">$CBS_{32}$ ($\nu = 0.4$)</td>
-    <td width="33%">$CBS_{43}$ ($\nu = 0.4$)</td>  
+    <td width="25%">$IB_{4}$   ($\nu = 0.4$, , MFAC = 1, Elemental coupling)</td>
+    <td width="25%">$CBS_{32}$ ($\nu = 0.4$)</td>
+    <td width="25%">$CBS_{43}$ ($\nu = 0.4$)</td>  
+  <td width="25%">$CBS_{43}$ ($\nu = 0.4$)</td>  
   </tr>
   <tr align="center">
-    <td width="33%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>   
-    <td width="33%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>
-   <td width="33%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>
+    <td width="25%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>   
+    <td width="25%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>
+   <td width="25%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>
+   <td width="25%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>
   </tr> 
   
 </table>
