@@ -185,9 +185,9 @@ The following results are at t = 100s, with nodal coupling, MFAC = 0.5, $\nu = -
   </tr>
   <tr align="center">
     <td width="10%"> Remarks</td>   
-    <td width="30%">$CBS_{32}$ Improved a lot</td>
-    <td width="30%">$CBS_{32}$ Improved a little</td>
-    <td width="30%">$CBS_{32}$ Improved a little</td>
+    <td width="30%">Improved a lot</td>
+    <td width="30%">Improved a little</td>
+    <td width="30%">Improved a little</td>
   </tr>
 </table>
 
