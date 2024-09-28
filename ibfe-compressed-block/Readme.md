@@ -140,46 +140,58 @@ Everything is the same except for the kernel function.
 
 ***
 
-# Coarse mesh (N = 16), Unmodified invariants 
+# Coarse mesh (N = 16)
+## Reproducing the bad results in Ben's paper
+
+The following results are with nodal coupling, MFAC = 1, endtime = 500s, loadtime = 100s.
+
 <table>
  <tr align="center">
-    <td width="25%">$IB_{4}$   ($\nu = -1$, MFAC = 1, QUAD4, Elemental coupling, t = 100s)</td>
-    <td width="25%">$CBS_{32}$ ($\nu = -1$, MFAC = 1, QUAD4, Elemental coupling, t = 96s (endtime = 500s, loadtime = 100s)</td>
-    <td width="25%">$CBS_{32}$ ($\nu = -1$, MFAC = 0.5, QUAD4, Nodal coupling, t = 50s (endtime = 100s, loadtime = 40s)</td>
-    <td width="25%">$CBS_{32}$ ($\nu = -1$, MFAC = 0.5, TRI3, Nodal coupling, t = 50 s, endtime = 100s, loadtime = 40s )</td>
+    <td width="50%">$IB_{4}$   ($\nu = -1$, MFAC = 1, QUAD4, Elemental coupling, t = 100s)</td>
+    <td width="50%">$CBS_{32}$ ($\nu = -1$, MFAC = 1, QUAD4, Elemental coupling, t = 96s ()</td>
   </tr>
   <tr align="center">
-    <td width="25%"><img src="https://github.com/user-attachments/assets/04a7b1ee-d6af-49e2-b21a-8cad09be3ece" width=100% height=100%> </td>   
-    <td width="25%"><img src="https://github.com/user-attachments/assets/8e98c60a-7f17-4935-ad64-9e33fd38e378" width=100% height=100%> </td>
-    <td width="25%"><img src="https://github.com/user-attachments/assets/b22d3e40-5d0e-4ace-bd93-caf62d334357" width=100% height=100%> </td>
-    <td width="25%"><img src="https://github.com/user-attachments/assets/0981dfd4-04d7-45c6-a258-ce6e3ed9b797" width=100% height=100%> </td>
+    <td width="50%"><img src="https://github.com/user-attachments/assets/04a7b1ee-d6af-49e2-b21a-8cad09be3ece" width=100% height=100%> </td>   
+    <td width="50%"><img src="https://github.com/user-attachments/assets/8e98c60a-7f17-4935-ad64-9e33fd38e378" width=100% height=100%> </td>
   </tr>
   <tr align="center">
-    <td width="25%">This reproduced the bad results in Ben's paper</td>
-    <td width="25%">$CBS_{32}$ does not work with MFAC = 1</td>
-    <td width="25%">$CBS_{32}$ works for QUAD4 with MFAC = 0.5</td>
-    <td width="25%">$CBS_{32}$ also works using TRI3 element with MFAC = 0.5</td>
+    <td width="50%">This reproduced the bad results in Ben's paper</td>
+    <td width="50%">$CBS_{32}$ does not work with MFAC = 1</td>
   </tr>
 </table>
 
-***
-# Coarse mesh (N = 16), Modified invariants,  Nodal coupling, MFAC = 0.5, (endtime = 100s, loadtime = 40s)
+## Comparison between Unmodified and Modified invariants 
+
+The following results are at t = 100s, with nodal coupling, MFAC = 0.5, $\nu = -1$, END_TIME = 100s, and LOAD_TIE = 40s.
 
 <table>
  <tr align="center">
-    <td width="33%">$IB_{4}$   ($\nu = -1$, QUAD4, t = 100 s)</td>
-    <td width="33%">$CBS_{32}$ ($\nu = -1$, QUAD4, t = 100 s)</td>
-    <td width="33%">$CBS_{32}$ ($\nu = -1$,  TRI3, t = 100 s)</td>
+    <td width="10%"> Invariants</td>  
+    <td width="30%">$IB_{4}$   (QUAD4)</td>
+    <td width="30%">$CBS_{32}$ (QUAD4)</td>
+    <td width="30%">$CBS_{32}$ (TRI3)</td>
   </tr>  
   <tr align="center">
-    <td width="33%"><img src="https://github.com/user-attachments/assets/5381c35a-1d78-4870-a324-919da1d2fe94" width=100% height=100%> </td>   
-    <td width="33%"><img src="https://github.com/user-attachments/assets/fd87f929-ab81-44e2-83eb-e9bf2419fac4" width=100% height=100%> </td>
-    <td width="33%"><img src="https://github.com/user-attachments/assets/91f07d16-acd6-481d-a22c-fb14d9cade34" width=100% height=100%> </td>
-  </tr> 
- <tr align="center">
-    <td width="33%">$IB_{4}$   Modified invariants improves a lot</td>
-    <td width="33%">$CBS_{32}$ Modified invariants improves slightly</td>
-    <td width="33%">$CBS_{32}$ Modified invariants improves slightly</td>
-  </tr>   
+   <td width="10%"> Unmodified</td>
+    <td width="30%"><img src="https://github.com/user-attachments/assets/e626742d-1379-4b6e-8b5c-b2d44d6b6530" width=100% height=100%> </td>
+    <td width="30%"><img src="https://github.com/user-attachments/assets/e2729166-d54c-45bd-a9ac-aadb5ebf3041" width=100% height=100%> </td>
+    <td width="30%"><img src="https://github.com/user-attachments/assets/0981dfd4-04d7-45c6-a258-ce6e3ed9b797" width=100% height=100%> </td>
+  
+  <tr align="center">
+    <td width="10%"> Modified</td>   
+    <td width="30%"><img src="https://github.com/user-attachments/assets/5381c35a-1d78-4870-a324-919da1d2fe94" width=100% height=100%> </td>   
+    <td width="30%"><img src="https://github.com/user-attachments/assets/b7e8a69a-ca31-4811-9b66-b20b0a7969fd" width=100% height=100%> </td>
+    <td width="30%"><img src="https://github.com/user-attachments/assets/91f07d16-acd6-481d-a22c-fb14d9cade34" width=100% height=100%> </td>
+  </tr>
+  <tr align="center">
+    <td width="10%"> Remarks</td>   
+    <td width="30%">$CBS_{32}$ Improved a lot</td>
+    <td width="30%">$CBS_{32}$ Improved a little</td>
+    <td width="30%">$CBS_{32}$ Improved a little</td>
+  </tr>
 </table>
+
+
+
+
 
