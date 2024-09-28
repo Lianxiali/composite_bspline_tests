@@ -158,18 +158,17 @@ Everything is the same except for the kernel function.
 
 ***
 # Coarse mesh (N = 16), Modified invariants,  Nodal coupling, MFAC = 0.5, (endtime = 100s, loadtime = 40s)
-</table>
+
+<table>
  <tr align="center">
     <td width="33%">$IB_{4}$   ($\nu = -1$, QUAD4, t = 100 s)</td>
     <td width="33%">$CBS_{32}$ ($\nu = -1$, QUAD4, t = 100 s)</td>
     <td width="33%">$CBS_{32}$ ($\nu = -1$,  TRI3, t = 100 s)</td>
-  </tr>
-  
+  </tr>  
   <tr align="center">
     <td width="33%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>   
     <td width="33%"><img src="https://github.com/user-attachments/assets/fd87f929-ab81-44e2-83eb-e9bf2419fac4" width=100% height=100%> </td>
-   <td width="33%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>
-  </tr> 
-  
+    <td width="33%"><img src="https://github.com/user-attachments/assets/" width=100% height=100%> </td>
+  </tr>   
 </table>
 
