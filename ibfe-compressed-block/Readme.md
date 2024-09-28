@@ -144,7 +144,7 @@ Everything is the same except for the kernel function.
 <table>
  <tr align="center">
     <td width="25%">$IB_{4}$   ($\nu = -1$, MFAC = 1, QUAD4, Elemental coupling, t = 100s)</td>
-    <td width="25%">$CBS_{32}$ ($\nu = -1$, MFAC = 1, QUAD4, Nodal couping, t = 96s (endtime = 500s, loadtime = 100s)</td>
+    <td width="25%">$CBS_{32}$ ($\nu = -1$, MFAC = 1, QUAD4, Elemental couping, t = 96s (endtime = 500s, loadtime = 100s)</td>
     <td width="25%">$CBS_{32}$ ($\nu = -1$, MFAC = 0.5, QUAD4, Nodal couping, t = 50s (endtime = 100s, loadtime = 40s)</td>
     <td width="25%">$CBS_{32}$ ($\nu = -1$, MFAC = 0.5, TRI3, Nodal coupling, t = 50 s, endtime = 100s, loadtime = 40s )</td>
   </tr>
