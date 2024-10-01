@@ -9,8 +9,8 @@ U_MAX = 5.0
 // grid spacing parameters
 MAX_LEVELS = 1                                     // maximum number of levels in locally refined grid
 REF_RATIO  = 2                                     // refinement ratio between levels
-M = 16						   // number of nodes per edge of Lagrangian mesh
-MFAC = 2	                                   // ratio of Lagrangian mesh width to Cartesian mesh width of the rectangular
+M = M_TEMP					   // number of nodes per edge of Lagrangian mesh
+MFAC = MFAC_TEMP                                   // ratio of Lagrangian mesh width to Cartesian mesh width of the rectangular
 N = ceil(M * MFAC * L_X / L_lag)                   // actual    number of grid cells on coarsest grid level
 NFINEST = (REF_RATIO^(MAX_LEVELS - 1))*N           // effective number of grid cells on finest   grid level
 DX0 = L_X/N                                        // mesh width on coarsest grid level
@@ -24,14 +24,15 @@ N_X = N
 N_Y = N_X * (L_Y / L_X)
 
 // solver parameters
-IB_DELTA_FUNCTION          = "IB_4"                // the type of smoothed delta function to use for Lagrangian-Eulerian interaction
+IB_DELTA_FUNCTION          = KERN_FCN                // the type of smoothed delta function to use for Lagrangian-Eulerian interaction
 SPLIT_FORCES               = FALSE                 // whether to split interior and boundary forces
 USE_JUMP_CONDITIONS        = FALSE                 // whether to impose pressure jumps at fluid-structure interfaces
-USE_CONSISTENT_MASS_MATRIX = TRUE                  // whether to use a consistent or lumped mass matrix
+USE_CONSISTENT_MASS_MATRIX = FALSE                  // whether to use a consistent or lumped mass matrix
 IB_POINT_DENSITY           = 2.0                   // approximate density of IB quadrature points for Lagrangian-Eulerian interaction
+IB_USE_NODAL_QUADRATURE    = TRUE
 START_TIME                 = 0.0e0                 // initial simulation time
-END_TIME                   = 75.0                  // final simulation time
-LOAD_TIME		   = 70.0		   // time when load is fully applied
+END_TIME                   = 50.0                  // final simulation time
+LOAD_TIME 		   = 30.0		   // time when full load is applied
 GROW_DT                    = 2.0e0                 // growth factor for timesteps
 NUM_CYCLES                 = 1                     // number of cycles of fixed-point iteration
 CONVECTIVE_TS_TYPE         = "ADAMS_BASHFORTH"     // convective time stepping type
@@ -39,7 +40,7 @@ CONVECTIVE_OP_TYPE         = "PPM"                 // convective differencing di
 CONVECTIVE_FORM            = "ADVECTIVE"           // how to compute the convective terms
 NORMALIZE_PRESSURE         = TRUE                  // whether to explicitly force the pressure to have mean zero
 CFL_MAX                    = 0.2                   // maximum CFL number
-DT                         = 0.05*CFL_MAX*DX/U_MAX // maximum timestep size
+DT                         = 0.001*DX // maximum timestep size
 ERROR_ON_DT_CHANGE         = TRUE                  // whether to emit an error message if the time step size changes
 VORTICITY_TAGGING          = FALSE                 // whether to tag cells for refinement based on vorticity thresholds
 TAG_BUFFER                 = 1                     // size of tag buffer used by grid generation algorithm
@@ -47,22 +48,26 @@ REGRID_CFL_INTERVAL        = 0.5                   // regrid whenever any materi
 OUTPUT_U                   = TRUE
 OUTPUT_P                   = TRUE
 OUTPUT_F                   = TRUE
-OUTPUT_OMEGA               = TRUE
-OUTPUT_DIV_U               = TRUE
+OUTPUT_OMEGA               = FALSE
+OUTPUT_DIV_U               = FALSE
 ENABLE_LOGGING             = TRUE
 
-// model parameters
-COMPRESSIVE_FORCE = -200.0
-SHEAR_MOD          = 80.194
-POISSON_RATIO = -1.0
-BULK_MOD    = 2*SHEAR_MOD * (1 + POISSON_RATIO) / 3.0 / (1.0 - 2*POISSON_RATIO)
 
+
+// model parameters
+COMPRESSIVE_FORCE = -2.0e2
+SHEAR_MOD          = 8.0194e1
+POISSON_RATIO = 0.49995
+BULK_MOD    = 2*SHEAR_MOD * (1 + POISSON_RATIO) / 3.0 / (1.0 - 2*POISSON_RATIO)
+ETA = 0.05*SHEAR_MOD
 USE_VOLUMETRIC_TERM = FALSE
 STRESS_FUNCTION = "UNMODIFIED"
+VOL_PENALTY_FUNCTION = "PENALTY1"
+SYMMETRIC = TRUE
 
 // penalty parameters
 SAFETY = 0.5
-KAPPA = SAFETY * 1.0e3 * DX / DT //SAFETY * 1.0e2 * DX / DT^2
+KAPPA = 2.5*DX/DT 
 
 VelocityBcCoefs_0 {
    acoef_function_0 = "1.0"
@@ -154,7 +159,7 @@ Main {
 
 // visualization dump parameters
    viz_writer                  = "VisIt","ExodusII"
-   viz_dump_interval           = 200 * M / 4 //100*(NFINEST/48)*(NFINEST/4)
+   viz_dump_interval           = int(1/DT) // 200 * M / 4 //100*(NFINEST/48)*(NFINEST/4)
    viz_dump_dirname            = "viz_IB2d"
    visit_number_procs_per_file = 1
 

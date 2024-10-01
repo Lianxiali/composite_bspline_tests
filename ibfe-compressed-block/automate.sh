@@ -1,61 +1,81 @@
- #!/bin/bash
-
+#!/bin/bash
 echo "PID IS $$"
 
-for ELEM in TRI3 QUAD4 TRI6 QUAD9; do
-  mkdir elem=$ELEM
-  cd elem=$ELEM
-  for NU in -1.0 0.0 .4 .49995; do
-    mkdir nu=$NU
-    cd nu=$NU
-    for M in 4 8 16 32 64; do
+MAIN_DIR="$PWD"
+OUTPUT_DIR="$PWD/RESULTS"
+M_SOLID="4 6 16 32 64 128"
+MFACS="0.5 0.75 1.0 2.0 4.0"
+KERNELS="IB_3 \
+    IB_4 \
+    IB_5 \
+    IB_6 \
+    DISCONTINUOUS_LINEAR \
+    COMPOSITE_BSPLINE_32 \
+    COMPOSITE_BSPLINE_43 \
+    COMPOSITE_BSPLINE_54 \
+    COMPOSITE_BSPLINE_65 \
+    PIECEWISE_LINEAR \
+    BSPLINE_3 \
+    BSPLINE_4 \
+    BSPLINE_5 \
+    BSPLINE_6"
 
-      echo $PWD
-      cp ../../input2d input2d_$M
+# Loop over solid mesh refinement
+for M in $M_SOLID; do
+    mkdir -p "${OUTPUT_DIR}/M${M}"
+    cd "${OUTPUT_DIR}/M${M}"
 
-      perl -pi -e "s/ELEM_TEMP/$ELEM/" ./input2d_$M
-      perl -pi -e "s/NU_TEMP/$NU/" ./input2d_$M
-      perl -pi -e "s/M_TEMP/$M/" ./input2d_$M
-      
-      perl -pi -e "s/IB2d.log/IB2d_$M.log/" ./input2d_$M
-      perl -pi -e "s/viz_IB2d/viz_IB2d_$M/" ./input2d_$M
-      perl -pi -e "s/restart_IB2d/restart_IB2d_$M/" ./input2d_$M
-      perl -pi -e "s/hier_data_IB2d/hier_data_IB2d_$M/" ./input2d_$M
-      
-      if [ $ELEM = TRI3 ]
-      then
-	perl -pi -e "s/PK1_DEV_QUAD_ORDER_TEMP/FIRST/" ./input2d_$M
-	perl -pi -e "s/PK1_DIL_QUAD_ORDER_TEMP/FIRST/" ./input2d_$M
-	
-	perl -pi -e "s/MFAC_TEMP/1/" ./input2d_$M
-	
-      elif [ $ELEM = QUAD4 ]
-      then
-	perl -pi -e "s/PK1_DEV_QUAD_ORDER_TEMP/SECOND/" ./input2d_$M
-	perl -pi -e "s/PK1_DIL_QUAD_ORDER_TEMP/SECOND/" ./input2d_$M
-	
-	perl -pi -e "s/MFAC_TEMP/2/" ./input2d_$M
-      elif [ $ELEM = TRI6 ]
-      then
-	perl -pi -e "s/PK1_DEV_QUAD_ORDER_TEMP/FOURTH/" ./input2d_$M
-	perl -pi -e "s/PK1_DIL_QUAD_ORDER_TEMP/FOURTH/" ./input2d_$M
-	
-	perl -pi -e "s/MFAC_TEMP/1/" ./input2d_$M
-      elif [ $ELEM = QUAD9 ]
-      then
-	perl -pi -e "s/PK1_DEV_QUAD_ORDER_TEMP/FIFTH/" ./input2d_$M
-	perl -pi -e "s/PK1_DIL_QUAD_ORDER_TEMP/FIFTH/" ./input2d_$M
-	
-	perl -pi -e "s/MFAC_TEMP/2/" ./input2d_$M
-      fi
+    # Loop over the MFACS values
+    for mfac in $MFACS; do
+
+        # Create directory for MFAC and move into it
+        mkdir -p "MFAC_${mfac}"
+        cd "MFAC_${mfac}"
+
+        # Loop over KERNELS
+        for kernel in $KERNELS; do
+            echo "Processing kernel: $kernel"
+
+            # Create directory for each kernel and move into it
+            mkdir -p "${kernel}"
+            cd "${kernel}"
+
+            # Copy necessary files
+            cp "${MAIN_DIR}/input2d.ss" .
+            ln -sf "${MAIN_DIR}/main2d" .
+
+            # Replace placeholders in the input2d.ss file
+            perl -pi -e "s/M_TEMP/$M/" input2d.ss 
+            perl -pi -e "s/MFAC_TEMP/$mfac/" input2d.ss
+            perl -pi -e "s/KERN_FCN/\"${kernel}\"/" input2d.ss
+
+            # Check if the first argument is "parallel"
+            if [ "$1" == "parallel" ]; then
+
+                # Create a copy of the original file for modification
+                cp "${MAIN_DIR}/sluslurm-longleaf.sh" .
+
+                # Modify job name
+                jobname="M${M}_MFAC${mfac}_${kernel}"
+                sed -i "s/JOBNAME/$jobname/g" sluslurm-longleaf.sh
+
+                # Submit the modified job file
+                sbatch sluslurm-longleaf.sh
+                echo "$jobname: job submitted."
+
+            else
+                # Execute the main2d program with specified options
+                ./main2d input2d.ss -ksp_rtol 1.0e-10 -stokes_ksp_rtol 1.0e-10 &
+            fi
+
+            # Move back to the MFAC directory
+            cd ..
+
+        done
+
+        # Move back to the main directory
+        cd ..
 
     done
-    ln -s ../../main .
-    cp ../../run_IBFE_comparisons.sh run_IBFE_comparisons.sh
-    chmod +x run_IBFE_comparisons.sh
-    bsub -q week -n 1 -J ${ELEM}_NU=${NU} ./run_IBFE_comparisons.sh
-    
-    cd ..
-  done
-  cd ..
+
 done

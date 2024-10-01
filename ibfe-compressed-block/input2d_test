@@ -3,14 +3,14 @@ L_X   = 40.0                                        // width  of computational d
 L_Y   = 40.0                                        // height of computational domain
 L_LAG = 20.0                                        // longest edge of block
 RHO   = 1.0
-MU    = 1.0e-2
+MU    = 0.16
 U_MAX = 5.0
 
 // grid spacing parameters
 MAX_LEVELS = 1                                     // maximum number of levels in locally refined grid
-REF_RATIO  = 4                                     // refinement ratio between levels
-M = 96						   // number of nodes per edge of Lagrangian mesh
-MFAC = 1	                                   // ratio of Lagrangian mesh width to Cartesian mesh width of the rectangular
+REF_RATIO  = 2                                     // refinement ratio between levels
+M = 16						   // number of nodes per edge of Lagrangian mesh
+MFAC = 0.5	                                   // ratio of Lagrangian mesh width to Cartesian mesh width of the rectangular
 REF_FACTOR = (REF_RATIO^(MAX_LEVELS - 1))
 N = ceil(M * MFAC * L_X / L_LAG /REF_FACTOR)       // actual    number of grid cells on coarsest grid level
 NFINEST = REF_FACTOR*N      		           // effective number of grid cells on finest   grid level
@@ -18,33 +18,30 @@ DX0 = L_X/N                                        // mesh width on coarsest gri
 DX  = L_X/NFINEST                                  // mesh width on finest   grid level
 
 //blocks
-ELEM_TYPE = "TRI3"                            // type of element to use for discretization of the rectangular blocks
-PK1_DEV_QUAD_ORDER = "FIRST"
-PK1_DIL_QUAD_ORDER = "FIRST"
+ELEM_TYPE = "QUAD4"                            // type of element to use for discretization of the rectangular blocks
+PK1_DEV_QUAD_ORDER = "SECOND"
+PK1_DIL_QUAD_ORDER = "SECOND"
 N_X = N
 N_Y = N_X * (L_Y / L_X)
 
 // solver parameters
-IB_DELTA_FUNCTION          = "IB_4"                // the type of smoothed delta function to use for Lagrangian-Eulerian interaction
+IB_DELTA_FUNCTION          = "COMPOSITE_BSPLINE_32"                // the type of smoothed delta function to use for Lagrangian-Eulerian interaction
 SPLIT_FORCES               = FALSE                 // whether to split interior and boundary forces
 USE_JUMP_CONDITIONS        = FALSE                 // whether to impose pressure jumps at fluid-structure interfaces
-USE_CONSISTENT_MASS_MATRIX = TRUE                  // whether to use a consistent or lumped mass matrix
+USE_CONSISTENT_MASS_MATRIX = FALSE                  // whether to use a consistent or lumped mass matrix
 IB_POINT_DENSITY           = 2.0                   // approximate density of IB quadrature points for Lagrangian-Eulerian interaction
-IB_USE_NODAL_QUADRATURE    = FALSE
+IB_USE_NODAL_QUADRATURE    = TRUE
 START_TIME                 = 0.0e0                 // initial simulation time
-END_TIME                   = 500.0                 // final simulation time
-LOAD_TIME		   = 0.2 * END_TIME	   // time when load is fully applied
+END_TIME                   = 50.0                  // final simulation time
+LOAD_TIME		            = 0.3 * END_TIME	   // time when load is fully applied
 GROW_DT                    = 2.0e0                 // growth factor for timesteps
 NUM_CYCLES                 = 1                     // number of cycles of fixed-point iteration
-
-
 CONVECTIVE_TS_TYPE         = "ADAMS_BASHFORTH"     // convective time stepping type
 CONVECTIVE_OP_TYPE         = "PPM"                 // convective differencing discretization type
 CONVECTIVE_FORM            = "ADVECTIVE"           // how to compute the convective terms
 NORMALIZE_PRESSURE         = TRUE                  // whether to explicitly force the pressure to have mean zero
 CFL_MAX                    = 0.2                   // maximum CFL number
-DT_PREFACTOR		   = .025 * RHO
-DT                         = .025*CFL_MAX*DX/U_MAX // maximum timestep size
+DT                         = 0.001*DX // maximum timestep size
 ERROR_ON_DT_CHANGE         = TRUE                  // whether to emit an error message if the time step size changes
 VORTICITY_TAGGING          = FALSE                 // whether to tag cells for refinement based on vorticity thresholds
 TAG_BUFFER                 = 1                     // size of tag buffer used by grid generation algorithm
@@ -52,19 +49,19 @@ REGRID_CFL_INTERVAL        = 0.5                   // regrid whenever any materi
 OUTPUT_U                   = TRUE
 OUTPUT_P                   = TRUE
 OUTPUT_F                   = TRUE
-OUTPUT_OMEGA               = TRUE
-OUTPUT_DIV_U               = TRUE
+OUTPUT_OMEGA               = FALSE
+OUTPUT_DIV_U               = FALSE
 ENABLE_LOGGING             = TRUE
 
 // model parameters
 COMPRESSIVE_FORCE = -2.0e2
 SHEAR_MOD          = 8.0194e1
-POISSON_RATIO = 0.49995
+POISSON_RATIO = -1
 BULK_MOD    = 2*SHEAR_MOD * (1 + POISSON_RATIO) / 3.0 / (1.0 - 2*POISSON_RATIO)
 ETA = 0.05*SHEAR_MOD
 
-USE_VOLUMETRIC_TERM = TRUE
-STRESS_FUNCTION = "MODIFIED"
+USE_VOLUMETRIC_TERM = FALSE
+STRESS_FUNCTION = "UNMODIFIED"
 VOL_PENALTY_FUNCTION = "PENALTY1"
 
 //Symmetric triangle meshes
@@ -72,7 +69,7 @@ SYMMETRIC = TRUE
 
 // penalty parameters
 SAFETY = 0.5
-KAPPA = SAFETY * 4.0e1*DT_PREFACTOR^2*DX/DT^2
+KAPPA = 2.5*DX/DT
 
 VelocityBcCoefs_0 {
    acoef_function_0 = "1.0"
@@ -141,10 +138,6 @@ INSStaggeredHierarchyIntegrator {
    start_time                    = START_TIME
    end_time                      = END_TIME
    grow_dt                       = GROW_DT
-
-   //viscous_time_stepping_type         = VISCOUS_TS_TYPE
-   //creeping_flow                 = CREEPING_FLOW
-
    convective_time_stepping_type = CONVECTIVE_TS_TYPE
    convective_op_type            = CONVECTIVE_OP_TYPE
    convective_difference_form    = CONVECTIVE_FORM
@@ -169,7 +162,7 @@ Main {
 
 // visualization dump parameters
    viz_writer                  = "VisIt","ExodusII"
-   viz_dump_interval           = 100 * M/4 //100*(NFINEST/48)*(NFINEST/4)
+   viz_dump_interval           = int(1/DT) //100*(NFINEST/48)*(NFINEST/4)
    viz_dump_dirname            = "viz_IB2d"
    visit_number_procs_per_file = 1
 

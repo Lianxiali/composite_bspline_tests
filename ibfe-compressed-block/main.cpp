@@ -28,8 +28,6 @@
 // POSSIBILITY OF SUCH DAMAGE.
 
 // Config files
-#include <IBAMR_config.h>
-#include <IBTK_config.h>
 #include <SAMRAI_config.h>
 
 // Headers for basic PETSc functions
@@ -49,7 +47,7 @@
 #include <libmesh/mesh_generation.h>
 #include <libmesh/face_tri3.h>
 #include <libmesh/face_tri6.h>
-
+#include <libmesh/mesh_function.h>
 
 //////////////////////////////////////////////////
 
@@ -91,15 +89,17 @@
 #include <ibamr/IBFEMethod.h>
 #include <ibamr/INSCollocatedHierarchyIntegrator.h>
 #include <ibamr/INSStaggeredHierarchyIntegrator.h>
+
 #include <ibtk/AppInitializer.h>
+#include <ibtk/IBTKInit.h>
+#include <ibtk/IBTK_MPI.h>
+#include <ibtk/LEInteractor.h>
 #include <ibtk/libmesh_utilities.h>
 #include <ibtk/muParserCartGridFunction.h>
 #include <ibtk/muParserRobinBcCoefs.h> 
 
 // Set up application namespace declarations
 #include <ibamr/app_namespaces.h>
-
-
 
 // Elasticity model data.
 namespace ModelData
@@ -273,7 +273,7 @@ PK1_dil_stress_function(TensorValue<double>& PP,
        PP = bulk_mod * log(FF.det()) * tensor_inverse_transpose(FF, NDIM);
     }
     else if (vol_penalty_function == "PENALTY2")
-    
+    {
        PP = bulk_mod * FF.det() * log(FF.det()) * tensor_inverse_transpose(FF, NDIM);
     }
     else
@@ -283,6 +283,7 @@ PK1_dil_stress_function(TensorValue<double>& PP,
     
     return;
 } // PK1_dil_stress_function
+
 
 Real
 initial_jacobian(const libMesh::Point& /*p*/,
@@ -568,12 +569,17 @@ void build_mesh(libMesh::Mesh& mesh,
       }
 } //end of build_mesh function
 
-
-
 }
+
+
 using namespace ModelData;
 using namespace MeshTools::Generation;
-
+// Function prototypes
+static ofstream x_stream, y_stream, z_stream;
+void record_position(const Pointer<IBFEMethod> fem_solver,
+                     const EquationSystems* eqn_systems,
+                     const vector<libMesh::Point> evaluation_point,
+                     const double loop_time);
 /*******************************************************************************
  * For each run, the input filename and restart information (if needed) must   *
  * be given on the command line.  For non-restarted case, command line is:     *
@@ -589,10 +595,8 @@ int
 main(int argc, char* argv[])
 {
     //Initialize libMesh, PETSc, MPI, and SAMRAI.
-    LibMeshInit init(argc, argv);
-    SAMRAI_MPI::setCommunicator(PETSC_COMM_WORLD);
-    //  SAMRAI_MPI::setCallAbortInSerialInsteadOfExit();
-    SAMRAIManager::startup();
+    IBTKInit ibtk_init(argc, argv, MPI_COMM_WORLD);
+    const LibMeshInit& init = ibtk_init.getLibMeshInit();
 
     { // cleanup dynamically allocated objects prior to shutdown
 
@@ -703,9 +707,10 @@ main(int argc, char* argv[])
 	  
 	}
 
-
-
 	mesh.prepare_for_use();
+  vector<libMesh::Point> points_to_track;
+  const libMesh::Point  point(20, 25, 0);
+  points_to_track.push_back(point);
  	//lag_bdry_info = &mesh.get_boundary_info();
 
 	damping 	  = input_db->getDouble("ETA");
@@ -757,7 +762,7 @@ main(int argc, char* argv[])
         std::vector<int> vars(NDIM);
         for (unsigned int d = 0; d < NDIM; ++d) vars[d] = d;
         vector<SystemData> velocity_data(1);
-        velocity_data[0] = SystemData(IBFEMethod::VELOCITY_SYSTEM_NAME,vars);
+        velocity_data[0] = SystemData(ib_method_ops->getVelocitySystemName(),vars);
 
         // Configure the IBFE solver.
         IBFEMethod::LagSurfaceForceFcnData solid_surface_force_data(solid_surface_force_function);
@@ -898,10 +903,12 @@ main(int argc, char* argv[])
         }
 
 	// Open streams to save volume of structure.
-        ofstream volume_stream;
+        // ofstream x_stream;
         if (SAMRAI_MPI::getRank() == 0)
         {
-            volume_stream.open("volume.curve", ios_base::out | ios_base::trunc);
+            x_stream.open( "x_posn.txt", ios_base::out | ios_base::trunc);
+            x_stream.precision(10);          
+            // volume_stream.open("volume.curve", ios_base::out | ios_base::trunc);
         }
 
 
@@ -920,15 +927,14 @@ main(int argc, char* argv[])
             pout << "At beginning of timestep # " << iteration_num << "\n";
             pout << "Simulation time is " << loop_time << "\n";
 	    
-
 	    //to compute average J for each element
 	    double J_integral = 0.0;
 	    double L_1_error_J = 0.0;
 	    double L_2_error_J = 0.0;
 	    double L_oo_error_J = 0.0;
 	    double elem_area  = 0.0;
-            System& X_system = equation_systems->get_system<System>(IBFEMethod::COORDS_SYSTEM_NAME);
-	    NumericVector<double>* X_vec = X_system.solution.get();
+            System& X_system = equation_systems->get_system<System>(ib_method_ops->getCurrentCoordinatesSystemName());
+	          NumericVector<double>* X_vec = X_system.solution.get();
             NumericVector<double>* X_ghost_vec = X_system.current_local_solution.get();
             X_vec->localize(*X_ghost_vec);
             DofMap& X_dof_map = X_system.get_dof_map();
@@ -944,9 +950,8 @@ main(int argc, char* argv[])
             const MeshBase::const_element_iterator el_end = mesh.active_local_elements_end();
             for (MeshBase::const_element_iterator el_it = el_begin; el_it != el_end; ++el_it)
             {
-	      
-		elem_area  = 0.0;
-		J_integral = 0.0;
+	              elem_area  = 0.0;
+                J_integral = 0.0;
 		
                 Elem* const elem = *el_it;
                 fe->reinit(elem);
@@ -960,31 +965,40 @@ main(int argc, char* argv[])
                 {
                     jacobian(FF, qp, X_node, dphi);
                     J_integral += abs(FF.det()) * JxW[qp];
-		    L_1_error_J += abs(1.0 - FF.det()) * JxW[qp];
-		    L_2_error_J += (1.0 - FF.det()) * (1.0 - FF.det()) * JxW[qp];
-		    if (abs(1.0 - FF.det()) > L_oo_error_J ) L_oo_error_J = abs(1.0 - FF.det() );
-		    elem_area  += JxW[qp];
+                    L_1_error_J += abs(1.0 - FF.det()) * JxW[qp];
+                    L_2_error_J += (1.0 - FF.det()) * (1.0 - FF.det()) * JxW[qp];
+                    if (abs(1.0 - FF.det()) > L_oo_error_J ) L_oo_error_J = abs(1.0 - FF.det() );
+                    elem_area  += JxW[qp];
                 }
-		J_integral = J_integral / elem_area;
-		ExplicitSystem& jac_system        = equation_systems->get_system<ExplicitSystem>("JacobianDeterminant");
-		const unsigned int jac_system_num = jac_system.number();  // identifier number for the system
-		const dof_id_type dof_id_J        = elem->dof_number(jac_system_num,0,/*comp*/0);
-		jac_system.solution->set(dof_id_J, J_integral);
-		//jac_system.solution->localize(*jac_system.current_local_solution);
+                J_integral = J_integral / elem_area;
+                ExplicitSystem& jac_system        = equation_systems->get_system<ExplicitSystem>("JacobianDeterminant");
+                const unsigned int jac_system_num = jac_system.number();  // identifier number for the system
+                const dof_id_type dof_id_J        = elem->dof_number(jac_system_num,0,/*comp*/0);
+                jac_system.solution->set(dof_id_J, J_integral);
+                //jac_system.solution->localize(*jac_system.current_local_solution);
                 
             }
             jac_system.solution->close();
             L_1_error_J = SAMRAI_MPI::sumReduction(L_1_error_J);
-	    L_2_error_J = SAMRAI_MPI::sumReduction(L_2_error_J);
-	    L_oo_error_J = SAMRAI_MPI::maxReduction(L_oo_error_J);
-	    if (SAMRAI_MPI::getRank() == 0)
-	    L_2_error_J = sqrt(L_2_error_J);
+            L_2_error_J = SAMRAI_MPI::sumReduction(L_2_error_J);
+            L_oo_error_J = SAMRAI_MPI::maxReduction(L_oo_error_J);
+            if (SAMRAI_MPI::getRank() == 0)
+            L_2_error_J = sqrt(L_2_error_J);
 	    
-	    pout << "\nThe L_1 error of J = " << L_1_error_J << "\n";
-	    pout << "\nThe L_2 error of J = " << L_2_error_J << "\n";
-	    pout << "\nThe L_oo error of J = " << L_oo_error_J << "\n";
-	    pout << "\n";
-	    
+            pout << "\nThe L_1 error of J = " << L_1_error_J << "\n";
+            pout << "The L_2 error of J = " << L_2_error_J << "\n";
+            pout << "The L_oo error of J = " << L_oo_error_J << "\n";
+
+
+
+
+          // if (SAMRAI_MPI::getRank() == 0)
+          // {
+          //   // only work in serial
+          //     double x =  X_system.point_value(0, point_to_track);
+          //     double y =  X_system.point_value(1, point_to_track);            
+          //     x_stream << loop_time << " " << x << " " << y << std::endl;
+          // }     
 
             dt = time_integrator->getMaximumTimeStepSize();
             time_integrator->advanceHierarchy(dt);
@@ -1016,6 +1030,7 @@ main(int argc, char* argv[])
                                               iteration_num / viz_dump_interval + 1,
                                               loop_time);
                 }
+                record_position(ib_method_ops, equation_systems, points_to_track, loop_time);
             }
             if (dump_restart_data && (iteration_num % restart_dump_interval == 0 || last_step))
             {
@@ -1034,10 +1049,51 @@ main(int argc, char* argv[])
 
         // Cleanup Eulerian boundary condition specification objects (when
         // necessary).
+        if (SAMRAI_MPI::getRank() == 0)
+        {
+            x_stream.close();
+        }        
         for (unsigned int d = 0; d < NDIM; ++d) delete u_bc_coefs[d];
 
     } // cleanup dynamically allocated objects prior to shutdown
 
-    SAMRAIManager::shutdown();
     return 0;
 } // main
+
+
+void
+record_position(const Pointer<IBFEMethod> ib_method_ops,
+                const EquationSystems* eqn_systems,
+                const vector<libMesh::Point> points_to_track,
+                const double loop_time)
+{
+    const System& x_system = eqn_systems->get_system(ib_method_ops->getCurrentCoordinatesSystemName());
+    const DofMap& x_dof_map = x_system.get_dof_map();
+    std::vector<unsigned int> vars;
+    x_system.get_all_variable_numbers(vars);
+
+    NumericVector<double>* x_vec = x_system.solution.get();
+    std::unique_ptr<NumericVector<Number> > x_serial_vec = NumericVector<Number>::build(x_vec->comm());
+    x_serial_vec->init(x_vec->size(), true, SERIAL);
+    x_vec->localize(*x_serial_vec);
+
+    MeshFunction mesh_fcn(*eqn_systems, *x_serial_vec, x_dof_map, vars, 0);
+    mesh_fcn.init();
+    vector<DenseVector<Number> > x(points_to_track.size());
+    for (unsigned int i = 0; i < points_to_track.size(); i++)
+    {
+      mesh_fcn(points_to_track[i], loop_time, x[i]);
+    }
+
+    if (SAMRAI_MPI::getRank() == 0)
+    {
+        x_stream << loop_time;
+        for (unsigned int i = 0; i < points_to_track.size(); i++)
+        {
+            x_stream << " " << x[i](0) << " " << x[i](1);
+        }
+        x_stream << std::endl;
+    }
+
+    return;
+}

@@ -30,9 +30,6 @@ TARGET_LINK_LIBRARIES(${PROJECT_NAME} IBAMR::IBAMR2d)
 # IBAMR saves the flags it used to compile - you can reuse them if you want to
 SET(CMAKE_CXX_FLAGS ${IBAMR_CXX_FLAGS})
 
-
-SET(IBAMR_DIR $HOME/software/IBAMR)
-
 # SET(CMAKE_BUILD_TYPE "Debug")
-# SET(CMAKE_LIBRARY_PATH /home/michael/software/IBAMR/lib)
+
 
