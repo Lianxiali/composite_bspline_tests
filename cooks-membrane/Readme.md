@@ -52,6 +52,12 @@ Table: Fluid grid number N = MFAC*M*lx/LX for grid convergence test (MFAC fixed,
 |   64   	|  64 	|  96  	| 128 	|  160 	| 192 	|
 
 Note: lx = fluid domain length = 13, LX = solid domain length = 6.5  
-Note: I expand the fluid domain sizes from 10x10 to 13x13 to make the grid refinement convenient (to ensure the grid number an integer)  
+Note: I expanded the fluid domain sizes from 10x10 to 13x13 to make the grid refinement convenient (to ensure the grid number is an integer)  
 
+Table: Solid mesh number M = N/(MFAC*lx/LX)  
+|  N/MFAC 	| **0.5** 	| **0.75** 	| **1** 	| **1.25** 	| **1.5** 	|
+|:-------:	|:-------:	|:--------:	|:-----:	|:--------:	|:-------:	|
+|  **90** 	|    90   	|    60    	|   45  	|    36    	|    30   	|
+|   120   	|   120   	|    80    	|   60  	|    48    	|    40   	|
 
+Note: N = 90 is chosen, so the corresponding solid number is 90, 60, 45, 36, and 30 for these MFAC numbers.  
