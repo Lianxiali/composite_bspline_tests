@@ -41,5 +41,16 @@ Zoomed in
 <img src="https://github.com/user-attachments/assets/51145681-a165-4a3e-983d-6bdf33549a47" width="40%" height="40%">
 <img src="https://github.com/user-attachments/assets/2f6db1b0-0689-4b4a-842c-4d6c8067e7e0" width="40%" height="40%">
 
+Table: Fluid grid number N = MFAC*M*lx/LX for grid convergence test (MFAC fixed, fluid and solid refine simultaneously)  
+| M/MFAC 	| 0.5 	| 0.75 	|  1  	| 1.25 	| 1.5 	|
+|:------:	|:---:	|:----:	|:---:	|:----:	|:---:	|
+|    4   	|  4  	|   6  	|  8  	|  10  	|  12 	|
+|    8   	|  8  	|  12  	|  16 	|  20  	|  24 	|
+|   16   	|  16 	|  24  	|  32 	|  40  	|  48 	|
+|   32   	|  32 	|  48  	|  64 	|  80  	|  96 	|
+|   48   	|  48 	|  72  	|  96 	|  120 	| 144 	|
+|   64   	|  64 	|  96  	| 128 	|  160 	| 192 	|
+Note: lx = fluid domain length = 13, LX = solid domain length = 6.5  
+Note: I expand the fluid domain sizes from 10x10 to 13x13 to make the grid refinement convenient (to ensure the grid number an integer)  
 
 
