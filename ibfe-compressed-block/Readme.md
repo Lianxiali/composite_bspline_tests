@@ -205,7 +205,7 @@ The following results are at t = 100s, with nodal coupling, MFAC = 0.5, END_TIME
     <td width="23%">$CBS_{43}$ (QUAD4)</td>
   </tr>  
   <tr align="center">
-   <td width="8%"> Unmodified with $\nu = -1$ </td>![image]
+   <td width="8%"> Unmodified with $\nu = -1$ </td>
     <td width="23%"><img src="https://github.com/user-attachments/assets/47b0c098-9a5a-4261-9e73-1d72b9b28492" width=100% height=100%> </td>
     <td width="23%"><img src="https://github.com/user-attachments/assets/b8076d95-8411-4f5e-9fb7-53c0a0561226" width=100% height=100%> </td>
     <td width="23%"><img src="https://github.com/user-attachments/assets/beefcf97-ac3b-4b10-969b-203aa2f9a84c" width=100% height=100%> </td>
