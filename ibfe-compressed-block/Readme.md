@@ -194,15 +194,15 @@ The following results are at t = 100s, with nodal coupling, MFAC = 0.5, $\nu = -
 
 ## Comparison between with both modified invariants and volumetric energy ($\nu=0.4$) and without either of them,   (MFAC = 0.5, M = 32)
 
-The following results are at t = 100s, with nodal coupling, MFAC = 0.5, END_TIME = 100s, and LOAD_TIE = 40s.
+The following results are at t = 100s, with nodal coupling, QUAD4, MFAC = 0.5, END_TIME = 100s, and LOAD_TIE = 40s.
 
 <table>
  <tr align="center">
     <td width="8%"> Approach</td>  
-    <td width="23%">$IB_{4}$   (QUAD4)</td>
-    <td width="23%">$BS_{4}$   (QUAD4)</td>  
-    <td width="23%">$CBS_{32}$ (QUAD4)</td>
-    <td width="23%">$CBS_{43}$ (QUAD4)</td>
+    <td width="23%">$IB_{4}$   </td>
+    <td width="23%">$BS_{4}$   </td>  
+    <td width="23%">$CBS_{32}$ </td>
+    <td width="23%">$CBS_{43}$ </td>
   </tr>  
   <tr align="center">
    <td width="8%"> Unmodified with $\nu = -1$ </td>
