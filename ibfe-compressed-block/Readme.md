@@ -208,14 +208,14 @@ The following results are at t = 100s, with nodal coupling, MFAC = 0.5, END_TIME
    <td width="8%"> Unmodified with $\nu = -1$ </td>
     <td width="23%"><img src="https://github.com/user-attachments/assets/47b0c098-9a5a-4261-9e73-1d72b9b28492" width=100% height=100%> </td>
     <td width="23%"><img src="https://github.com/user-attachments/assets/b8076d95-8411-4f5e-9fb7-53c0a0561226" width=100% height=100%> </td>
-    <td width="23%"><img src="https://github.com/user-attachments/assets/beefcf97-ac3b-4b10-969b-203aa2f9a84c" width=100% height=100%> </td>
+    <td width="23%"><img src="https://github.com/user-attachments/assets/14d1a931-cfc5-478b-9581-d8a2be310050" width=100% height=100%> </td>
     <td width="23%"><img src="https://github.com/user-attachments/assets/542884a3-5fe8-497e-91c6-32c05ad701e0" width=100% height=100%> </td>
   </tr>  
   <tr align="center">
     <td width="8%"> Modified and $\nu = 0.4$  </td>   
     <td width="23%"><img src="https://github.com/user-attachments/assets/919e0720-eafa-49cd-8f90-607cc9212dcc" width=100% height=100%> </td> 
     <td width="23%"><img src="https://github.com/user-attachments/assets/d0f16507-01c8-4dd1-a5af-42f573c252cb" width=100% height=100%> </td>
-    <td width="23%"><img src="https://github.com/user-attachments/assets/f118aa5b-f0f0-461b-adc8-4d9871802765" width=100% height=100%> </td>
+    <td width="23%"><img src="https://github.com/user-attachments/assets/9a15d12d-cead-47cb-a14f-8f55cb2bbc1d" width=100% height=100%> </td>
     <td width="23%"><img src="https://github.com/user-attachments/assets/0dcfda79-c49e-465d-b68f-057433f7d1a0" width=100% height=100%> </td>
   </tr>
   <tr align="center">
