@@ -199,8 +199,8 @@ The following results are at t = 100s, with nodal coupling, QUAD4, MFAC = 0.5, E
 <table>
  <tr align="center">
     <td width="8%"> Approach</td>  
-    <td width="23%">$IB_{4}$   </td>
-    <td width="23%">$BS_{4}$   </td>  
+    <td width="23%">$IB_{3}$   </td>
+    <td width="23%">$BS_{3}$   </td>  
     <td width="23%">$CBS_{32}$ </td>
     <td width="23%">$CBS_{43}$ </td>
   </tr>  
